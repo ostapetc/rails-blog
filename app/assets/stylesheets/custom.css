@@ -1,0 +1,31 @@
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container input[type=text], .container textarea, .field_with_errors {
+    width: 90% !important;
+}
+
+.field_with_errors {
+    background: none !important;
+}
+
+#error_explanation {
+    border: 1px solid #CC0000 !important;
+}
+
+#error_explanation ul {
+    margin-top: 10px;
+}
+
+.page {
+    margin-bottom: 30px;
+}
+
+.btn {
+    color: #ffffff !important;
+}
+
+.page hgroup {
+    margin-top: 5px;
+}
