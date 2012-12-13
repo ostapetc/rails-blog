@@ -1,3 +1,11 @@
+<%= javascript_include_tag 'nicEdit' %>
+
+<script type="text/javascript">
+  bkLib.onDomLoaded(function() {
+      nicEditors.allTextAreas()
+  });
+</script>
+
 <%= form_for(@page) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
@@ -21,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :text %>
-    <%= f.text_area :text, rows: 4 %>
+    <%= f.text_area :text, rows: 13 %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>

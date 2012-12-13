@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require ../../../vendor/assets/bootstrap//js/bootstrap.min
-//= require plugins/Jquery.transformRailsPagination
+//= require /bootstrap
+//= require /Jquery
 
 $(function() {
     $('.pagination').transformRailsPagination();

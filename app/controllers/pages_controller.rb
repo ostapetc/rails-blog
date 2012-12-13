@@ -13,7 +13,8 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page = Page.find(params[:id])
+    @page    = Page.find(params[:id])
+    @comment = @page.comments.build
 
     respond_to do |format|
       format.html # show.html.erb

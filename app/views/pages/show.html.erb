@@ -1,1 +1,9 @@
 <%= render @page, preview: false %>
+
+<% if @page.comments.present? %>
+    eee
+<% else %>
+    <div class="alert">Еще никто не оставлял комментарии</div>
+<% end %>
+
+<%= render partial: 'comments/form' %>

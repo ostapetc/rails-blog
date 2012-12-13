@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+  has_many :comments
+
   attr_accessible :image, :text, :title
   validates_presence_of :title, :text
 
