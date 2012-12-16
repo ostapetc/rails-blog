@@ -15,6 +15,7 @@ class PagesController < ApplicationController
   def show
     @page    = Page.find(params[:id])
     @comment = @page.comments.build
+    @comment.user_name = cookies[:user_name]
 
     respond_to do |format|
       format.html # show.html.erb

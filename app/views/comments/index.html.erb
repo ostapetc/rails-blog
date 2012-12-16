@@ -1,0 +1,14 @@
+<% @comments.each do |comment| %>
+    <div class="comment well">
+        <div class="comment-header">
+          <i class="icon-user"></i>
+          <strong><%= comment.user_name %></strong>
+          <span class="date" style="float: right">
+            <%= comment.created_at %>
+          </span>
+        </div>
+        <div class="comment-text">
+            <%= comment.text %>
+        </div>
+    </div>
+<% end %>

@@ -29,3 +29,12 @@
 .page hgroup {
     margin-top: 5px;
 }
+
+.label {
+    min-width: inherit !important;
+    min-height: inherit !important;
+}
+
+h1 a:hover {
+    background-color: inherit !important;
+}

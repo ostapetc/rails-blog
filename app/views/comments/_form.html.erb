@@ -1,0 +1,23 @@
+<%= form_for(@comment, remote: true) do |f| %>
+    <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <ul></ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :text %>
+      <%= f.text_area :text, rows: 3 %>
+    </div>
+
+    <%= f.hidden_field :page_id %>
+
+    <div class="actions">
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+<% end %>
