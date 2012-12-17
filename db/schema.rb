@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213142117) do
+ActiveRecord::Schema.define(:version => 20121217122823) do
 
   create_table "comments", :force => true do |t|
     t.integer  "page_id"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(:version => 20121213142117) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "page_tags", :force => true do |t|
+    t.integer  "page_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "page_tags", ["page_id", "tag_id"], :name => "index_page_tags_on_page_id_and_tag_id", :unique => true
+
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.string   "image"
@@ -29,5 +38,13 @@ ActiveRecord::Schema.define(:version => 20121213142117) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
 
 end

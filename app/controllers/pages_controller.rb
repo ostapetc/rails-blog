@@ -2,7 +2,12 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.paginate(page: params[:page], per_page: 7) || error_not_found
+    if (params[:tag_id])
+      @tag   = Tag.find(params[:tag_id]) || error_not_found
+      @pages = @tag.pages.paginate(page: params[:page], per_page: 7)
+    else
+      @pages = Page.paginate(page: params[:page], per_page: 7) || error_not_found
+    end
 
     respond_to do |format|
       format.html # index.html.erb

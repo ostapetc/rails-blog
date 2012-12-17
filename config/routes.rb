@@ -1,4 +1,6 @@
 Homepage::Application.routes.draw do
+  resources :tags
+
   resources :pages
   resources :comments
 

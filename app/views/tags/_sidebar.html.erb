@@ -1,0 +1,14 @@
+<div class="well" style="position: fixed;right: 40px;top: 85px">
+  <ul class="nav nav-list page-info-sidebar">
+    <li class="nav-header">Tags</li>
+    <% Tag.all.each do |tag| %>
+        <%
+        path = pages_path(tag_id: tag.id)
+        cls  = current_page?(path) ? "active" : "";
+        %>
+        <li class="<%= cls %>">
+            <%= link_to tag.name, path %>
+        </li>
+    <% end %>
+  </ul>
+</div>
