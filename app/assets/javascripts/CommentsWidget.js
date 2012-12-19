@@ -6,20 +6,26 @@
 
        _create : function() {
            var $form = $('#' + this.element.data('form'));
+           var that  = this;
 
            $form.bind('ajax:success', function(status, data) {
-               console.log(data);
+               that._render(function() {
+                    location.href = '#comment-' + data.id;
+                   $form.find('textarea').val('');
+               });
            });
 
            this._render();
        },
 
-       _render: function() {
+       _render: function(callback) {
            var el = this.element;
-           el.html("Загрузка комментариев");
-
            $.get('/comments?page_id=' + el.data('page'), function(res) {
                el.html(res);
+
+               if (callback != undefined) {
+                   callback();
+               }
            });
        }
 

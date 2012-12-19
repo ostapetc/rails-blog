@@ -1,4 +1,4 @@
-<article class="page">
+<article class="page" id="page_<%= page.id %>">
   <h1>
     <% if preview %>
         <%= link_to page.title, page %>
@@ -6,6 +6,13 @@
         <%= page.title %>
     <% end %>
   </h1>
+
+
+  <% if page.image.present? %>
+      <div class="page-image thumbnail">
+        <%= image_tag page.image.url(preview ? :small : :medium) %>
+      </div>
+  <% end %>
 
   <% if preview %>
       <%= raw page.text.truncate 1000 %>
@@ -20,7 +27,7 @@
     <% end %>
 
     | <i class="icon-calendar"></i> <%= page.created_at.strftime('%B %d, %Y') %>
-    | <i class="icon-comment"></i> <a href="#">3 Comments</a>
+    | <i class="icon-comment"></i> <%= link_to pluralize(page.comments.count, 'Comment'), page_path(page) + '#comments' %>
     | <i class="icon-share"></i> <a href="#">39 Shares</a>
   </p>
 
@@ -30,6 +37,8 @@
     <% end %>
 
     <%= link_to 'Edit', edit_page_path(page), class: 'btn btn-success' %>
+    <%= link_to 'Delete', page_path(page), method: :delete, remote: true, confirm: 'Delete Page?', class: 'btn btn-danger' %>
+
   </hgroup>
 </article>
 

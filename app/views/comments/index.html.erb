@@ -1,10 +1,11 @@
 <% @comments.each do |comment| %>
     <div class="comment well">
+        <a name="comment-<%= comment.id %>"></a>
         <div class="comment-header">
           <i class="icon-user"></i>
           <strong><%= comment.user_name %></strong>
-          <span class="date" style="float: right">
-            <%= comment.created_at %>
+          <span class="date badge badge-inverse" style="float: right">
+            <%= comment.created_at.strftime('%B %d, %Y') %>
           </span>
         </div>
         <div class="comment-text">

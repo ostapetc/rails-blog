@@ -6,7 +6,7 @@
   });
 </script>
 
-<%= form_for(@page) do |f| %>
+<%= form_for(@page, html: {multipart: true}) do |f| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
@@ -30,6 +30,12 @@
   <div class="field">
     <%= f.label :text %>
     <%= f.text_area :text, rows: 13 %>
+  </div>
+  <div class="field">
+    <% tags.each do |tag| %>
+        <%= check_box_tag('tags[]', tag.id, (params[:tags] || []).include?(tag) || @page.has_tag(tag.id)) %>
+        <%= tag.name %> &nbsp;&nbsp;
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>

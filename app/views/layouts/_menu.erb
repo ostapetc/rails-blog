@@ -1,0 +1,15 @@
+<%
+items = {
+    'Pages' => root_path,
+    'Tasks' => tasks_path,
+    'Me'    => url_for(controller: '/pages', action: 'me')
+}
+%>
+
+<ul class="nav">
+  <% items.each do |label, url| %>
+      <li class="<%= current_page?(url) ? 'active' : '' %>">
+        <%= link_to label, url %>
+      </li>
+  <% end %>
+</ul>

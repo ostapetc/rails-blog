@@ -1,12 +1,14 @@
 class PagesController < ApplicationController
+  before_filter :tags_sidebar, only: ['index', 'show']
+
   # GET /pages
   # GET /pages.json
   def index
     if (params[:tag_id])
       @tag   = Tag.find(params[:tag_id]) || error_not_found
-      @pages = @tag.pages.paginate(page: params[:page], per_page: 7)
+      @pages = @tag.pages.includes(:tags).paginate(page: params[:page], per_page: 7)
     else
-      @pages = Page.paginate(page: params[:page], per_page: 7) || error_not_found
+      @pages = Page.includes(:tags).paginate(page: params[:page], per_page: 7)
     end
 
     respond_to do |format|
@@ -32,6 +34,7 @@ class PagesController < ApplicationController
   # GET /pages/new.json
   def new
     @page = Page.new
+    @tags = Tag.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +44,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
+    @tags = Tag.all
     @page = Page.find(params[:id])
   end
 
@@ -51,6 +55,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
+        @page.update_tags(params[:tags])
         format.html { redirect_to @page, notice: 'Page was successfully created.' }
         format.json { render json: @page, status: :created, location: @page }
       else
@@ -67,6 +72,8 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
+         @page.update_tags(params[:tags])
+
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
         format.json { head :no_content }
       else
@@ -83,8 +90,17 @@ class PagesController < ApplicationController
     @page.destroy
 
     respond_to do |format|
-      format.html { redirect_to pages_url }
-      format.json { head :no_content }
+      format.js
     end
+  end
+
+  # page about myself
+  def me
+
+  end
+
+  # setup tags sidebar
+  def tags_sidebar
+    @sidebar = 'tags/sidebar'
   end
 end

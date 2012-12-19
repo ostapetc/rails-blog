@@ -1,11 +1,13 @@
 Homepage::Application.routes.draw do
+  resources :tasks
   resources :tags
-
   resources :pages
   resources :comments
 
   root :to => 'pages#index'
-  match '/login' => 'session#create'
+
+  match '/me' => 'pages#me'
+  match '/auth/:provider/callback' => 'sessions#create', :as => :signing
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

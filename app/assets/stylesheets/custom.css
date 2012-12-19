@@ -38,3 +38,17 @@
 h1 a:hover {
     background-color: inherit !important;
 }
+
+.comment-header {
+    margin-bottom: 5px;
+}
+
+.page-image {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+h1 {
+    font-size: 30px !important;
+}
