@@ -1,15 +1,25 @@
 <%
 items = {
-    'Pages' => root_path,
-    'Tasks' => tasks_path,
-    'Me'    => url_for(controller: '/pages', action: 'me')
+    'Pages' => {
+        :url     => root_path,
+        :visible => true
+    },
+    'Tasks' => {
+        :url     => tasks_path,
+        :visible => (can? :index, Task)
+    },
+    'Me' => {
+        :url     => url_for(controller: '/pages', action: 'me'),
+        :visible => true
+    }
 }
 %>
 
 <ul class="nav">
-  <% items.each do |label, url| %>
-      <li class="<%= current_page?(url) ? 'active' : '' %>">
-        <%= link_to label, url %>
+  <% items.each do |label, data| %>
+      <% next unless data[:visible] %>
+      <li class="<%= current_page?(data[:url]) ? 'active' : '' %>">
+        <%= link_to label, data[:url] %>
       </li>
   <% end %>
 </ul>

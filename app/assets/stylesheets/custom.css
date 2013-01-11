@@ -1,3 +1,7 @@
+.underline {
+    text-decoration: underline !important;
+}
+
 .container h1 {
     margin-bottom: 20px;
 }
@@ -80,4 +84,65 @@ h1 {
 
 body {
     background-color: white !important;
+}
+
+
+/*Badges*/
+.badges-cluster li:nth-child(2n+1) {
+    clear: left;
+}
+.badges-cluster li {
+    -moz-box-sizing: border-box;
+    float: left;
+    margin: 20px 0 40px;
+    min-height: 89px;
+    padding-left: 130px;
+    position: relative;
+    width: 48%;
+}
+.badges li {
+    display: inline;
+    margin-right: 20px;
+}
+.card-b, .prereqs {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+
+.badges-cluster li .course-badge, .badges-cluster li .badges-show .achievement .awarded, .badges-show .achievement .badges-cluster li .awarded {
+    display: block;
+    left: -15px;
+    margin: 0;
+    position: absolute;
+    top: -15px;
+}
+.badges li img {
+    background: none repeat scroll 0 0 #F7F5EE;
+    border: 1px solid #D1CDC2;
+    border-radius: 100px 100px 100px 100px;
+    margin: 0 0 10px;
+    padding: 2px;
+}
+.course-badge, .badges-show .achievement .awarded {
+    background: none repeat scroll 0 0 #F7F5EE;
+    border: 1px solid #D1CDC2;
+    border-radius: 100px 100px 100px 100px;
+    padding: 2px;
+}
+
+/*Author box*/
+div.author {
+    position: absolute;
+    left: 20px;
+    width: 200px;
+}
+
+div.author a {
+    color: #000000 !important;
+}
+
+a:hover {
+    background-color: inherit !important;
+    text-decoration: none !important;
 }

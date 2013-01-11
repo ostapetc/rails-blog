@@ -95,22 +95,28 @@ class PagesController < ApplicationController
     end
   end
 
-  # page about myself
+  #GET page about myself
   def me
+  end
+
+  #GET my badges
+  def badges
 
   end
 
-  def format
-    @files = Dir['doc/pages/*'].map {|f| f}
 
-    if params[:file]
-      unless @files.include?(params[:file])
-        raise SecurityError
-      end
 
-      @text = File.new(params[:file]).read
-    end
-  end
+  #def format
+  #  @files = Dir['doc/pages/*'].map {|f| f}
+  #
+  #  if params[:file]
+  #    unless @files.include?(params[:file])
+  #      raise SecurityError
+  #    end
+  #
+  #    @text = File.new(params[:file]).read
+  #  end
+  #end
 
   # setup tags sidebar
   def tags_sidebar

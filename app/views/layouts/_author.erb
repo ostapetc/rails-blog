@@ -1,0 +1,51 @@
+<style type="text/css">
+    a.contact{
+        background-repeat: no-repeat;
+        padding-left: 30px !important;
+        text-decoration: none !important;
+    }
+
+    .contact.phone {
+        background-image: url(<%= asset_path('phone.png')%>);
+    }
+
+    .contact.skype {
+        background-image: url(<%= asset_path('skype.png')%>);
+    }
+
+    .contact.email {
+        background-image: url(<%= asset_path('email.png')%>);
+    }
+
+    .contact.facebook {
+        background-image: url(<%= asset_path('facebook.png')%>);
+    }
+
+    .contact-list {
+        list-style: none;
+        margin-left: 2px !important;
+        margin-top: 5px;
+    }
+
+    .contact-list li {
+
+    }
+</style>
+
+<div class="author well">
+    <%= link_to 'Code School badges', :badges, :class => 'underline'  %>
+    <ul class="contact-list">
+      <li>
+        <a href="skype:+7 965 193-52-32?call" class="contact phone">+7 965 193-52-32</a>
+      </li>
+      <li>
+        <a href="skype:artemostapetc?call" class="contact skype">artemostapetc</a>
+      </li>
+      <li>
+        <a href="mailto:artemostapetc@gmail.com" class="contact email">artemostapetc@gmail.com</a>
+      </li>
+      <li>
+        <a href="http://www.facebook.com/profile.php?id=1089098831" class="contact facebook">Артем Остапец</a>
+      </li>
+    </ul>
+</div>

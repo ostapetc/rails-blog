@@ -1,8 +1,8 @@
 Homepage::Application.routes.draw do
   root :to => 'pages#index'
 
-  match '/me'                      => 'pages#me'
-  match 'pages/format'             => 'pages#format'
+  match '/me'     => 'pages#me'
+  match '/badges' => 'pages#badges'
 
   match '/auth/:provider/callback' => 'sessions#create', :as => :signing
   match '/sessions/destroy'        => 'sessions#destroy'
@@ -11,8 +11,6 @@ Homepage::Application.routes.draw do
   resources :tags
   resources :pages
   resources :comments
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
