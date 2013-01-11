@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_filter :tags_sidebar, only: ['index', 'show']
+  load_and_authorize_resource
 
   # GET /pages
   # GET /pages.json
@@ -55,7 +56,6 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        @page.update_tags(params[:tags])
         format.html { redirect_to @page, notice: 'Page was successfully created.' }
         format.json { render json: @page, status: :created, location: @page }
       else
@@ -71,12 +71,13 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
 
     respond_to do |format|
-      if @page.update_attributes(params[:page])
-         @page.update_tags(params[:tags])
-
-        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
-        format.json { head :no_content }
+      if @page.update_attributes(params[:page], tags: params[:tags])
+        format.html {
+          redirect_to params[:commit] == 'redirect_to_show' ? @page : edit_page_path(@page),
+                      notice: 'Page was successfully updated.'
+        }
       else
+        raise @page.errors.full_messages.length.to_s
         format.html { render action: "edit" }
         format.json { render json: @page.errors, status: :unprocessable_entity }
       end
@@ -97,6 +98,18 @@ class PagesController < ApplicationController
   # page about myself
   def me
 
+  end
+
+  def format
+    @files = Dir['doc/pages/*'].map {|f| f}
+
+    if params[:file]
+      unless @files.include?(params[:file])
+        raise SecurityError
+      end
+
+      @text = File.new(params[:file]).read
+    end
   end
 
   # setup tags sidebar

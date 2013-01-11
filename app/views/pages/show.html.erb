@@ -1,12 +1,12 @@
 <%= render @page, preview: false %>
 
-<% if @page.comments.present? %>
-
-<% else %>
+<% unless @page.comments.present? %>
     <div class="alert">Еще никто не оставлял комментарии</div>
 <% end %>
 
 <a name="comments"></a> <br/>
 <div id="comments-widget" data-page="<%= @page.id %>" data-form="new_comment"></div>
+
+<br/>
 
 <%= render partial: 'comments/form' %>

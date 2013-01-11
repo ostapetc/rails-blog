@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   layout false
 
   # GET /comments
   # GET /comments.json
-  def index()
-
+  def index
     @comments = params[:page_id] ? Comment.where(page_id: params[:page_id]) : Comment.all
 
     respond_to do |format|
@@ -24,8 +24,7 @@ class CommentsController < ApplicationController
         cookies[:user_name] = @comment.user_name
         format.json { render json: @comment, status: :created, location: @comment }
       else
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-        format.js
+        format.json { render json: @comment.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end

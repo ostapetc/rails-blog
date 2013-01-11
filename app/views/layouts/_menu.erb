@@ -13,3 +13,27 @@ items = {
       </li>
   <% end %>
 </ul>
+
+<div class="pull-right">
+  <ul class="nav pull-right">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <%= @current_user.authenticated? ? @current_user.name : "Login" %>
+          <b class="caret"></b>
+        </a>
+      <ul class="dropdown-menu">
+        <% if @current_user.authenticated? %>
+            <% if can? :create, Page %>
+                <li><%= link_to 'New page', new_page_path %></li>
+            <% end %>
+
+            <li><a href="<%= url_for controller: :sessions, action: :destroy %>"><i class="icon-off"></i> Logout</a></li>
+        <% else %>
+            <li><a href="/auth/facebook">With Facebook</a></li>
+            <li><a href="/auth/twitter">With Twitter</a></li>
+            <li><a href="/auth/vkontakte">With Vkontakte</a></li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218151253) do
+ActiveRecord::Schema.define(:version => 20121225132821) do
 
   create_table "comments", :force => true do |t|
     t.integer  "page_id"
@@ -34,13 +34,14 @@ ActiveRecord::Schema.define(:version => 20121218151253) do
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.string   "image"
+    t.text     "text"
+    t.string   "text_file"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.text     "text"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
   end
 
   create_table "tags", :force => true do |t|
@@ -64,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20121218151253) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "role"
   end
 
 end

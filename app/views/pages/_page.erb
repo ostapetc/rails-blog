@@ -15,13 +15,13 @@
   <% end %>
 
   <% if preview %>
-      <%= raw page.text.truncate 1000 %>
+      <%= markdown(page.text_content.truncate 1000) %>
   <% else %>
-      <%= raw page.text %>
+      <%= markdown(page.text_content) %>
   <% end %>
 
   <p style="margin-top: 5px">
-    Tags:
+    Tags:            <%= can? :udpate, :Page %>
     <% page.tags.each do |tag| %>
         <a href="<%= pages_path(tag_id: tag.id) %>"><span class="label label-info"><%= tag.name %></span></a>
     <% end %>
@@ -33,12 +33,16 @@
 
   <hgroup style="margin-top: 5px">
     <% if preview %>
-        <%= link_to 'Read more', page, class: 'btn btn-primary' %>
+        <%= link_to 'Read more', page, class: 'btn btn-inverse  btn-mini' %>
     <% end %>
 
-    <%= link_to 'Edit', edit_page_path(page), class: 'btn btn-success' %>
-    <%= link_to 'Delete', page_path(page), method: :delete, remote: true, confirm: 'Delete Page?', class: 'btn btn-danger' %>
+    <% if can? :update, Page %>
+        <%= link_to 'Edit', edit_page_path(page), class: 'btn btn-success btn-mini' %>
+    <% end %>
 
+    <% if can? :destroy, Page %>
+        <%= link_to 'Delete', page_path(page), method: :delete, remote: true, confirm: 'Delete Page?', class: 'btn btn-danger btn-mini' %>
+    <% end %>
   </hgroup>
 </article>
 

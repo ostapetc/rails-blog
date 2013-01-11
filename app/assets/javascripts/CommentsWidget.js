@@ -15,6 +15,11 @@
                });
            });
 
+           $form.bind('ajax:error', function(xhr, status, error) {
+               var errors = $.parseJSON(status.responseText);
+               alert(errors.join("\n"))
+           });
+
            this._render();
        },
 

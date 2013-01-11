@@ -1,0 +1,6 @@
+--- 
+open_files: 
+  - app/models/comment.rb
+  - app/controllers/application_controller.rb
+  - app/controllers/tags_controller.rb
+  - app/views/layouts/application.html.erb

@@ -14,9 +14,10 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
-//= require /bootstrap
+//= require bootstrap.min.js
 //= require /Jquery
 
 $(function() {
     $('.pagination').transformRailsPagination();
+    prettyPrint();
 });

@@ -2,8 +2,8 @@
     margin-bottom: 20px;
 }
 
-.container input[type=text], .container textarea, .field_with_errors {
-    width: 90% !important;
+.container input[type=text], .container textarea, .field_with_errors, select {
+    width: 98% !important;
 }
 
 .field_with_errors {
@@ -51,4 +51,33 @@ h1 a:hover {
 
 h1 {
     font-size: 30px !important;
+}
+
+
+#content a:not(.btn) {
+    color: #44413d !important;
+    text-decoration: underline;
+}
+#content a:hover:not(.btn) {
+    color: #1c1a19 !important;
+    text-decoration: none;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.navbar-inner {
+    height: 40px !important;
+    min-height: 40px !important;
+}
+
+.navbar .nav > li > a {
+    padding: 5px 15px !important;
+    font-weight: bold;
+    font-size: 13px !important;
+}
+
+body {
+    background-color: white !important;
 }

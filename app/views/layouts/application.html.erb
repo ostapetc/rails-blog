@@ -29,20 +29,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="/" style="font-weight: bold">Artem Os.</a>
+      <!--<a class="brand" href="/" style="font-weight: bold">Artem Os.</a>-->
 
       <div class="nav-collapse collapse">
         <%= render partial: 'layouts/menu' %>
-        <form class="navbar-form pull-right">
-          <%= link_to '+', new_page_path, class: 'btn btn-success', style: 'color: white; font-size: 24px;line-height: 24px' %>
-        </form>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <p id="notice"><%= notice %></p>
+<div class="container" id="content">
+  <% if notice %>
+      <div class="alert">
+        <%= notice %>
+      </div>
+  <% end %>
   <%= yield %>
   <hr>
   <footer>
@@ -50,7 +51,7 @@
   </footer>
 
   <% if @sidebar %>
-    <%= render partial: @sidebar %>
+      <%= render partial: @sidebar %>
   <% end %>
 </div>
 

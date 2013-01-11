@@ -1,0 +1,134 @@
+В PHP множественного наследования нет. В Python вы моглибы написать следующее:
+
+<pre class="prettyprint">
+class ClassName(Base1, Base2):
+    ....
+</pre>
+
+-11
+-12
+В PHP такое невозможно (в Java тоже), но мы можем сделать что-то похожее (но не тоже самое в точности) с Traits.
+Вместо классов от которых мы должны наследоваться мы создадим Traits:
+
+<pre class="prettyprint">
+trait Base1
+{
+    public function hello1($name)
+    {
+        return "Hello1 {$name}";
+    }
+}
+
+trait Base2
+{
+    public function hello2($name)
+    {
+        return "Hello2 {$name}";
+    }
+}
+</pre>
+
+И теперь мы можем использовать их функционал внутри класса:
+
+<pre class="prettyprint">
+class ClassName
+{
+    use Base1, Base2;
+}
+</pre>
+
+Главная причина по которой PHP, Java, и другие языки не поддерживают множественное наследование - это проблема с конфликтом унаследованных классов.
+
+Например если мы наследуемся от двух классов с одинаковым методом, какой из них должен выпольниться в дочернем классе?
+В Python это решается просто. Выполнится метод того класса, которой первый указан в перечислении родительских классов:
+
+<pre class="prettyprint">
+class Base1:
+    def hello1(self, name):
+        return "Hello1 " + name
+
+class Base2:
+    def hello1(self, name):
+        return "Hello2 " + name
+
+class ClassName(Base1, Base2):
+    pass
+
+c = ClassName()
+print c.hello1("Gonzalo")
+</pre>
+
+Результат: “Hello1 Gonzalo”
+
+Но если мы изменим порядок наследования:
+
+<pre class="prettyprint">
+class ClassName(Base2, Base1):
+    pass
+</pre>
+
+То результат будет: “Hello2 Gonzalo”
+
+В PHP эта проблема не решается из коробки. Если мы напишем следующее:
+
+<pre class="prettyprint">
+trait Base1
+{
+    public function hello1($name)
+    {
+        return "Hello1 {$name}";
+    }
+}
+
+trait Base2
+{
+    public function hello1($name)
+    {
+        return "Hello2 {$name}";
+    }
+}
+
+class ClassName
+{
+    use Base1, Base2;
+}
+
+$class = new ClassName();
+echo $class->hello1("Gonzalo");
+</pre>
+
+То мы получим Fatal error:
+
+PHP Fatal error: Trait method hello1 has not been applied, because there are collisions with other trait methods on ClassName on line...
+
+Чтобы избежать этих коллизий, мы должны указать явно, какой метод мы намерены использовать. Это просто:
+
+<pre class="prettyprint">
+trait Base1
+{
+    public function hello1($name)
+    {
+        return "Hello1 {$name}";
+    }
+}
+
+trait Base2
+{
+    public function hello1($name)
+    {
+        return "Hello2 {$name}";
+    }
+}
+
+class ClassName
+{
+    use Base1, Base2 {
+        Base1::hello1 insteadof Base2;
+    }
+}
+
+$class = new ClassName();
+echo $class->hello1("Gonzalo");
+</pre>
+
+

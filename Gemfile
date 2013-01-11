@@ -27,14 +27,42 @@ gem 'faker'
 
 gem 'will_paginate', '~> 3.0.0'
 
+#for image manipulation
 gem 'paperclip', '~> 3.0'
 
+#auth provider
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
+gem 'omniauth-twitter'
 
-gem 'pg'
-
+#production server
 gem 'thin'
+
+#for heroky db:sync
+gem 'taps'
+
+#tinymce
+gem 'tinymce-rails'
+
+#authorization
+gem 'cancan'
+
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem 'mysql2'
+end
+
+#markdown
+gem 'redcarpet', '1.17.2'
+
+#parser
+gem 'nokogiri'
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

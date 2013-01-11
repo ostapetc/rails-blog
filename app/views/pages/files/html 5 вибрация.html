@@ -1,0 +1,27 @@
+Vibration API позволяет вибрировать мобильное устройство с заданной продолжительностью.
+
+Определение поддержки Vibration API устройством:
+<pre class="prettyprint">
+var supportsVibrate = "vibrate" in navigator;
+</pre>
+
+Базовое использование:
+
+Метод navigator.vibrate принимает один аргумент, число для одиночной вибрации или массив чисел для серии вибраций.
+
+<pre class="prettyprint">
+//Вибрировать один раз в течении секунды
+navigator.vibrate(1000);
+</pre>
+
+<pre class="prettyprint">
+//Вибрировать три раза с продолжительностью 2, 3 и 1 секунда
+navigator.vibrate([2000, 3000, 1000])
+</pre>
+
+<pre class="prettyprint">
+//Чтобы остановить вибрацию нужно передать в качестве аргумента ноль или пустой массив
+navigator.vibrate(0);
+navigator.vibrate([]);
+</pre>
+

@@ -14,7 +14,12 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = @user.id
-
     redirect_to root_path, notice: "Welcome #{@user.name}"
+  end
+
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to '/', :notice => 'Bye'
   end
 end
