@@ -7,7 +7,6 @@
     <% end %>
   </h1>
 
-
   <% if page.image.present? %>
       <div class="page-image thumbnail">
         <%= image_tag page.image.url(preview ? :small : :medium) %>
@@ -21,9 +20,9 @@
   <% end %>
 
   <p style="margin-top: 5px">
-    Tags:            <%= can? :udpate, :Page %>
+    Tags:
     <% page.tags.each do |tag| %>
-        <a href="<%= pages_path(tag_id: tag.id) %>"><span class="label label-info"><%= tag.name %></span></a>
+        <a href="<%= pages_path(tag_id: tag.id) %>"><span class="label label-inverse"><%= tag.name %></span></a>
     <% end %>
 
     | <i class="icon-calendar"></i> <%= page.created_at.strftime('%B %d, %Y') %>

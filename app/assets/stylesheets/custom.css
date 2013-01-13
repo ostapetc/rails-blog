@@ -30,6 +30,10 @@
     color: #ffffff !important;
 }
 
+.btn:hover {
+    background-color: transparent !important;
+}
+
 .page hgroup {
     margin-top: 5px;
 }
@@ -55,16 +59,6 @@ h1 a:hover {
 
 h1 {
     font-size: 30px !important;
-}
-
-
-#content a:not(.btn) {
-    color: #44413d !important;
-    text-decoration: underline;
-}
-#content a:hover:not(.btn) {
-    color: #1c1a19 !important;
-    text-decoration: none;
 }
 
 .alert {
@@ -132,6 +126,42 @@ body {
 }
 
 /*Author box*/
+a.contact{
+    background-repeat: no-repeat;
+    padding-left: 30px !important;
+    text-decoration: none !important;
+}
+
+.contact.phone {
+    background-image: url('phone.png');
+}
+
+.contact.skype {
+    background-image: url('skype.png');
+}
+
+.contact.email {
+    background-image: url('email.png');
+}
+
+.contact.facebook {
+    background-image: url('facebook.png');
+}
+
+.contact-list {
+    list-style: none;
+    margin-left: 2px !important;
+    margin-top: 5px;
+}
+
+.contact-list li {
+
+}
+
+.author img{
+    margin-bottom: 10px;
+}
+
 div.author {
     position: absolute;
     left: 20px;
@@ -146,3 +176,59 @@ a:hover {
     background-color: inherit !important;
     text-decoration: none !important;
 }
+
+a.uppercase {
+    text-transform: uppercase;
+    color: ghostwhite !important;
+}
+
+ul.nav a:hover {
+    color: #c0c0c0 !important;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus {
+    background-color: black !important;
+}
+
+.well {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.label, .badge {
+    font-size: 11px !important;
+}
+
+.tag-li span {
+    float: right;
+    margin-left: 7px;
+}
+
+.tag-li span {
+    font-size: 9px !important;
+    padding: 3px 7px;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover {
+    background-color: #333333 !important;
+    color: #FFFFFF !important;
+}
+
+.nav-list > .active > a > span {
+    background-color: #f0f0f0 !important;
+    color: #333333 !important;
+}
+
+#content a:not(.btn) {
+    color: #44413d;
+    text-decoration: underline;
+}
+#content a:hover:not(.btn) {
+    color: #1c1a19;
+    text-decoration: none;
+}
+
+
+

@@ -1,6 +1,6 @@
 <%
 items = {
-    'Pages' => {
+    '→ Home' => {
         :url     => root_path,
         :visible => true
     },
@@ -8,10 +8,10 @@ items = {
         :url     => tasks_path,
         :visible => (can? :index, Task)
     },
-    'Me' => {
-        :url     => url_for(controller: '/pages', action: 'me'),
-        :visible => true
-    }
+    #'Me' => {
+    #    :url     => url_for(controller: '/pages', action: 'me'),
+    #    :visible => true
+    #}
 }
 %>
 
@@ -19,7 +19,7 @@ items = {
   <% items.each do |label, data| %>
       <% next unless data[:visible] %>
       <li class="<%= current_page?(data[:url]) ? 'active' : '' %>">
-        <%= link_to label, data[:url] %>
+        <%= link_to label, data[:url], class: :uppercase %>
       </li>
   <% end %>
 </ul>
@@ -27,7 +27,7 @@ items = {
 <div class="pull-right">
   <ul class="nav pull-right">
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <a href="#" class="dropdown-toggle uppercase" data-toggle="dropdown">
           <%= @current_user.authenticated? ? @current_user.name : "Login" %>
           <b class="caret"></b>
         </a>
@@ -37,7 +37,11 @@ items = {
                 <li><%= link_to 'New page', new_page_path %></li>
             <% end %>
 
-            <li><a href="<%= url_for controller: :sessions, action: :destroy %>"><i class="icon-off"></i> Logout</a></li>
+            <% if can? :index, Tag %>
+                <li><%= link_to 'Tags', tags_path %></li>
+            <% end %>
+
+            <li><a href="<%= url_for controller: :sessions, action: :destroy, :class => 'uppercase' %>"><i class="icon-off"></i> Logout</a></li>
         <% else %>
             <li><a href="/auth/facebook">With Facebook</a></li>
             <li><a href="/auth/twitter">With Twitter</a></li>

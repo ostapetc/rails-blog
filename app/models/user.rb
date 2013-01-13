@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  attr_readonly :role
   attr_accessible :name, :provider, :uid
   validates_presence_of :name, :provider, :uid
   validates_uniqueness_of :uid, :scope => :provider

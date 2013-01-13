@@ -95,14 +95,26 @@ class PagesController < ApplicationController
     end
   end
 
-  #GET page about myself
-  def me
+  # GET /pages/1
+  def detectTags
+    @page  = Page.find(params[:id])
+    text   = @page.text_content
+    result = []
+
+    Tag.all.each do |tag|
+      if text.include? tag.name
+        result.push tag.id
+      end
+    end
+
+    render :json => result
   end
 
   #GET my badges
   def badges
-
   end
+
+
 
 
 

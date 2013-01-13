@@ -1,3 +1,27 @@
+<style type="text/css">
+  .tag-checkbox {
+      white-space: nowrap;
+      display: inline-block;
+  }
+</style>
+
+<% content_for :js do %>
+    <script type="text/javascript">
+      $(function() {
+          $('#detect-tags').click(function(e) {
+              e.preventDefault();
+              $.getJSON(location.href.replace('edit', 'detectTags'), function(tags_ids) {
+                if (tags_ids) {
+                    for (var i in tags_ids) {
+                        $('.tag_checkbox[value=' + tags_ids[i] + ']').prop('checked', true);
+                    }
+                }
+              });
+          });
+      });
+    </script>
+<% end %>
+
 <%= tinymce_assets %>
 <%= tinymce %>
 
@@ -34,9 +58,15 @@
 
     <div class="field">
       <% Tag.all.each do |tag| %>
-          <%= check_box_tag('tags[]', tag.id, (params[:tags] || []).include?(tag) || @page.has_tag(tag.id)) %>
-          <%= tag.name %> &nbsp;&nbsp;
+          <div class="tag-checkbox">
+            <%= check_box_tag('tags[]', tag.id, (params[:tags] || []).include?(tag) || @page.has_tag(tag.id), class: :tag_checkbox) %>
+            <%= tag.name %> &nbsp;&nbsp;
+          </div>
       <% end %>
+    </div>
+
+    <div class="field">
+      <%= link_to 'Detect tags', '#', id: 'detect-tags' %>
     </div>
 
     <div class="actions" style="margin-top: 30px !important;">

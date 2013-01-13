@@ -6,8 +6,10 @@
         path = pages_path(tag_id: tag.id)
         cls  = current_page?(path) ? "active" : "";
         %>
-        <li class="<%= cls %>">
-            <%= link_to tag.name, path %>
+        <li class="tag-li <%= cls %>">
+            <a href="<%= path %>">
+              <%= tag.name %><span class="badge badge-inverse"><%= tag.pages.count %></span>
+            </a>
         </li>
     <% end %>
   </ul>

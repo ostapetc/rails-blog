@@ -27,8 +27,7 @@ class Page < ActiveRecord::Base
 
   def text_content
     if self.text_file
-      content = File.new("#{Rails.root}/app/views/pages/files/#{self.text_file}").read
-      #content.gsub(" ", "&nbsp;")
+      File.new("#{Rails.root}/app/views/pages/files/#{self.text_file}").read
     else
       text
     end

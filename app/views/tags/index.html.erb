@@ -1,23 +1,37 @@
+ <% content_for :js do %>
+    <script type="text/javascript">
+        $(function() {
+            $('.edit_tag').click(function(e) {
+                e.preventDefault();
+                $.get($(this).attr('href'), function(res) {
+                    $('#tag-form').html(res);
+                });
+            });
+        });
+    </script>
+<% end %>
+
 <h1>Listing tags</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
-<% @tags.each do |tag| %>
-  <tr>
-    <td><%= tag.name %></td>
-    <td><%= link_to 'Show', tag %></td>
-    <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-    <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= tag.name %></td>
+        <td><%= link_to 'Edit', edit_tag_path(tag), class: :edit_tag %></td>
+        <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tag', new_tag_path %>
+<div id="tag-form">
+  <%= render 'form' %>
+</div>
+

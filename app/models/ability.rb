@@ -25,11 +25,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can [:read, :me, :badges], Page
+    can [:read, :badges], Page
     can [:read, :create], Comment
 
     if user.role == 'admin'
-      can [:read, :create, :update, :destroy], Page
+      can [:read, :create, :update, :destroy, :detectTags], Page
+      can [:index, :create, :update, :destroy, :edit], Tag
     end
   end
 end
