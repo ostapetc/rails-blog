@@ -6,7 +6,10 @@
   <meta name="description" content="<%= content_for?(:description) %>">
   <meta name="author" content="<%= content_for?(:author) %>">
 
-  <title><%= content_for?(:title) %></title>
+  <%
+  title = content_for(:title)
+  %>
+  <title><%=  title.length > 0 ? title : 'Артем Остапец' %></title>
 
   <%= csrf_meta_tags %>
 

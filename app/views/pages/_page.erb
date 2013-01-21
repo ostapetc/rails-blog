@@ -3,6 +3,7 @@
     <% if preview %>
         <%= link_to page.title, page %>
     <% else %>
+        <%= content_for(:title, page.title) %>
         <%= page.title %>
     <% end %>
   </h1>
