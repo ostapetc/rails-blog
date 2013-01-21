@@ -16,7 +16,7 @@
   <% if preview %>
       <%= markdown(page.text_content.split('{CUT}')[0]) %>
   <% else %>
-      <%= markdown(page.text_content) %>
+      <%= markdown(page.text_content.gsub('{CUT}', '')) %>
   <% end %>
 
   <p style="margin-top: 5px">
