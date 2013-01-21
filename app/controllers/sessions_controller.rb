@@ -13,7 +13,9 @@ class SessionsController < ApplicationController
       end
     end
 
-    session[:user_id] = @user.id
+    session[:user_id]   = @user.id
+    cookies[:user_name] = @user.name
+
     redirect_to root_path, notice: "Welcome #{@user.name}"
   end
 

@@ -2670,11 +2670,11 @@ button.close {
 .btn:hover {
     color: #333333;
     text-decoration: none;
-    background-position: 0 -15px;
-    -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
-    -o-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
+    /*background-position: 0 -15px;*/
+    /*-webkit-transition: background-position 0.1s linear;*/
+    /*-moz-transition: background-position 0.1s linear;*/
+    /*-o-transition: background-position 0.1s linear;*/
+    /*transition: background-position 0.1s linear;*/
 }
 .btn:focus {
     outline: thin dotted #333;

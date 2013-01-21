@@ -1,0 +1,87 @@
+**Задача: не допустить, чтобы один и тот же скрипт отрабатывал в одно время.**
+
+Такое может понадобиться, если например мы в фоне отправляем письма пользователям.
+Идея лочить файл и в случае удачи выполнять основной код скрипта, если залочить не удается, значит другая задача работает в данное время.
+
+<pre class="prettyprint">
+$file = fopen("someCommandName.lock", 'r+');
+if (!flock($file, LOCK_EX | LOCK_NB))
+{
+    throw new CException("Another task working with this command now");
+}
+
+//Тут выполняем основной код.
+</pre>
+
+Так как я работаю преимущественно с Yii, то написал небольшое поведение для данного случая и добавил его ко всем командам:
+
+{CUT}
+
+<pre class="prettyprint">
+class LockCronTaskBehavior extends CConsoleCommandBehavior
+{
+    use Getter;
+
+    public $file_handler;
+
+
+    public function getLockFilePath()
+    {
+        $dir = Yii::getPathOfAlias('application.runtime.cron') . DIRECTORY_SEPARATOR;
+        if (!is_dir($dir))
+        {
+            mkdir($dir, 0755);
+            chmod($dir, 0755);
+        }
+
+        $path = $dir . get_class($this->owner) . '.lock';
+        if (!is_file($path))
+        {
+            touch($path);
+            chmod($path, 0755);
+        }
+
+        return $path;
+    }
+
+
+    public function beforeAction($event)
+    {
+        parent::beforeAction($event);
+
+        $this->file_handler = fopen($this->lock_file_path, 'r+');
+
+        if (!flock($this->file_handler, LOCK_EX | LOCK_NB))
+        {
+            throw new CException("Another task working with this command now");
+        }
+    }
+
+
+    public function afterAction($event)
+    {
+        parent::afterAction($event);
+        fclose($this->file_handler);
+    }
+}
+</pre>
+
+Остается добавить поведение в консольную команду:
+
+<pre class="prettyprint">
+class SendMailerOutboxCommand extends CConsoleCommand
+{
+    public function behaviors()
+    {
+        return array(
+            'LockCronTaskBehavior'
+        );
+    }
+}
+</pre>
+
+ссылка на github:
+<a href="https://github.com/ostapetc/Yii-CMS-2.0/blob/master/protected/components/commandsBehaviors/LockCronTaskBehavior.php">https://github.com/ostapetc/Yii-CMS-2.0/blob/master/protected/components/commandsBehaviors/LockCronTaskBehavior.php</a>
+
+
+
