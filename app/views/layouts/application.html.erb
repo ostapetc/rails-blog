@@ -12,18 +12,13 @@
   <title><%=  title.length > 0 ? title : 'Артем Остапец' %></title>
 
   <%= csrf_meta_tags %>
-
   <%= stylesheet_link_tag "application", :media => "all" %>
-
-  <style type="text/css">
-      body {
-          padding-top: 60px;
-          padding-bottom: 40px;
-      }
-  </style>
+  <%= auto_discovery_link_tag(:rss, url_for(:controller => :pages, :action => :feed, :only_path => false, :format => :rss)) %>
 </head>
 
 <body>
+
+
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/yandex_analytics' %>
 <%= render 'layouts/author' %>

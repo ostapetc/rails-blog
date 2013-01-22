@@ -1,7 +1,7 @@
-<div class="well" style="position: fixed;right: 40px;top: 85px">
+<div class="well" style="position: absolute;right: 40px;top: 85px">
   <ul class="nav nav-list page-info-sidebar">
     <li class="nav-header">Tags</li>
-    <% Tag.all.each do |tag| %>
+    <% Tag.joins(:pages).select('tags.*, COUNT(pages.id) AS pages_count').group('id').order('pages_count DESC').all.each do |tag| %>
         <%
         path = pages_path(tag_id: tag.id)
         cls  = current_page?(path) ? "active" : "";

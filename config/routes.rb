@@ -1,8 +1,9 @@
 Homepage::Application.routes.draw do
   root :to => 'pages#index'
 
-  match '/badges' => 'pages#badges'
+  match '/badges'               => 'pages#badges'
   match '/pages/:id/detectTags' => 'pages#detectTags'
+  match '/feed'                 => 'pages#feed'
 
   match '/auth/:provider/callback' => 'sessions#create', :as => :signing
   match '/sessions/destroy'        => 'sessions#destroy'

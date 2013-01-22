@@ -110,25 +110,17 @@ class PagesController < ApplicationController
     render :json => result
   end
 
+  #GET /feed
+  def feed
+    @pages = Page.all(order: 'created_at DESC', limit: 20)
+    respond_to do |format|
+      format.rss { render layout: false }
+    end
+  end
+
   #GET my badges
   def badges
   end
-
-
-
-
-
-  #def format
-  #  @files = Dir['doc/pages/*'].map {|f| f}
-  #
-  #  if params[:file]
-  #    unless @files.include?(params[:file])
-  #      raise SecurityError
-  #    end
-  #
-  #    @text = File.new(params[:file]).read
-  #  end
-  #end
 
   # setup tags sidebar
   def tags_sidebar
