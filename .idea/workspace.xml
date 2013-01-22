@@ -36,7 +36,7 @@
     <file path="/предотвращение нескольких одновременных запусков скрипта.html" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358781184360" ignored="false" />
     <file path="/omniauth.rb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358782402489" ignored="false" />
     <file path="/Удобный процесc разработки c Composer, Namespacing и PHPUnit.html" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358870127313" ignored="false" />
-    <file path="/Использование интерфейсов для исключений.html" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358873126546" ignored="false" />
+    <file path="/Использование интерфейсов для исключений.html" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358873396010" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
       <file leaf-file-name="Использование интерфейсов для исключений.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="33" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.510917">
+            <state line="38" column="4" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.25226587">
               <folding />
             </state>
           </provider>
@@ -532,11 +532,6 @@
         <state line="3" column="33" selection-start="196" selection-end="196" vertical-scroll-proportion="-2.5714285" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="568" selection-end="568" vertical-scroll-proportion="-12.857142" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -602,9 +597,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="5" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0349345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="33" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.510917">
+        <state line="38" column="4" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.25226587">
           <folding />
         </state>
       </provider>
