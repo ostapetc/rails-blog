@@ -37,21 +37,17 @@ $a = new SomeClass();
 var_dump(is_a($a,'SomeTrait'));
 </pre>
 
-Ожидаемый результат:
-----------------
+**Ожидаемый результат:**
 bool(true)
 
-Реальный результат:
---------------
+**Действительный результат:**
 bool(false)
 
 Тем не менее интерфейсы предоставляют нам возможность создавать исключения, которые могут означать не одну проблему, а несколько:
 <pre class="prettyprint">
 interface NotCountableException {}
 interface NotIterableException {}
-
 class NotUsableException extends Exception implements NotCountableException, NotIterableException {}
-
 try
 {
     throw new NotUsableException('not countable');
