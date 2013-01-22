@@ -44,10 +44,14 @@ bool(true)
 bool(false)
 
 Тем не менее интерфейсы предоставляют нам возможность создавать исключения, которые могут означать не одну проблему, а несколько:
+
 <pre class="prettyprint">
 interface NotCountableException {}
+
 interface NotIterableException {}
+
 class NotUsableException extends Exception implements NotCountableException, NotIterableException {}
+
 try
 {
     throw new NotUsableException('not countable');
