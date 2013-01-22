@@ -1,0 +1,63 @@
+В PHP(как и во многих объектно ориентированных языках), исключения(exceptions) являются довольно
+простыми объектами, функционал которых можно расширить и использовать повторно.
+PHP делает их особенными в том смысле, что это единственные объекты(throwable) унаследованные от базового класса исключений(class Exception),
+которые могут быть выброшены интерпретатором.
+
+Большинство разработчиков, так и делает, что дает им возможность ловить и обрабатывать свои исключения.
+
+<pre class="prettyprint">
+class MyException extends Exception {}
+
+try
+{
+    //какой-то код
+    throw new MyException('exception message');
+} catch (MyException $e)
+{
+    //код обработки исключения
+}
+</pre>
+
+**Используем интерфейсы для исключений**
+
+PHP имеет ряд недостатков с точки зрения расширения базового класса исключений, а именно, что вы не можете наследоваться
+от несколько классов.
+PHP ищет пути решения некоторых из этих проблем с помощью traits(), но traits не typehintable:
+
+<pre class="prettyprint">
+trait SomeTrait {}
+
+class SomeClass
+{
+    use SomeTrait;
+}
+
+$a = new SomeClass();
+
+var_dump(is_a($a,'SomeTrait'));
+</pre>
+
+Ожидаемый результат:
+----------------
+bool(true)
+
+Реальный результат:
+--------------
+bool(false)
+
+Тем не менее интерфейсы предоставляют нам возможность создавать исключения, которые могут означать не одну проблему, а несколько:
+<pre class="prettyprint">
+interface NotCountableException {}
+interface NotIterableException {}
+
+class NotUsableException extends Exception implements NotCountableException, NotIterableException {}
+
+try
+{
+    throw new NotUsableException('not countable');
+}
+catch (NotCountableException $e)
+{
+    // we can handle the exception
+}
+</pre>
