@@ -64,11 +64,14 @@ class TagsController < ApplicationController
 
   # GET /tags/fixCounters
   def fix_counters
+    text = ""
+
     Tag.all.each do |tag|
       tag.pages_count = tag.pages.count
       tag.save
+      text+= tag.name + '=' + tag.pages.count.to_s + '<br/>'
     end
 
-    render :text => 'done'
+    render :text => text
   end
 end
