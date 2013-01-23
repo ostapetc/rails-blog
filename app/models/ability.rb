@@ -30,7 +30,7 @@ class Ability
 
     if user.role == 'admin'
       can [:read, :create, :update, :destroy, :detectTags], Page
-      can [:index, :create, :update, :destroy, :edit], Tag
+      can [:index, :create, :update, :destroy, :edit, :fix_counters], Tag
     end
   end
 end

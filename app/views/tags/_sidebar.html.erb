@@ -1,14 +1,14 @@
 <div class="well" style="position: absolute;right: 40px;top: 85px">
   <ul class="nav nav-list page-info-sidebar">
     <li class="nav-header">Tags</li>
-    <% Tag.joins(:pages).select('tags.*, COUNT(pages.id) AS pages_count').group('pages.id').order('pages_count DESC').all.each do |tag| %>
+    <% Tag.where('pages_count > 0').order('pages_count DESC').all.each do |tag| %>
         <%
         path = pages_path(tag_id: tag.id)
         cls  = current_page?(path) ? "active" : "";
         %>
         <li class="tag-li <%= cls %>">
             <a href="<%= path %>">
-              <%= tag.name %><span class="badge badge-inverse"><%= tag.pages.count %></span>
+              <%= tag.name %><span class="badge badge-inverse"><%= tag.pages_count %></span>
             </a>
         </li>
     <% end %>

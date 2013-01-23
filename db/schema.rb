@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225132821) do
+ActiveRecord::Schema.define(:version => 20130123094818) do
 
   create_table "comments", :force => true do |t|
     t.integer  "page_id"
@@ -46,8 +46,9 @@ ActiveRecord::Schema.define(:version => 20121225132821) do
 
   create_table "tags", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "pages_count", :default => 0
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true

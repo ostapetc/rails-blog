@@ -61,4 +61,14 @@ class TagsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # GET /tags/fixCounters
+  def fix_counters
+    Tag.all.each do |tag|
+      tag.pages_count = tag.pages.count
+      tag.save
+    end
+
+    render :text => 'done'
+  end
 end

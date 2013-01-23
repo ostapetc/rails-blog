@@ -8,6 +8,8 @@ Homepage::Application.routes.draw do
   match '/auth/:provider/callback' => 'sessions#create', :as => :signing
   match '/sessions/destroy'        => 'sessions#destroy'
 
+  match '/tags/fix_counters' => 'tags#fix_counters'
+
   resources :tasks
   resources :tags
   resources :pages
