@@ -1,4 +1,4 @@
-<div class="well" style="position: absolute;right: 40px;top: 85px">
+<div class="well tags-sidebar">
   <ul class="nav nav-list page-info-sidebar">
     <li class="nav-header">Tags</li>
     <% Tag.where('pages_count > 0').order('pages_count DESC').all.each do |tag| %>

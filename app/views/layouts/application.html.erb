@@ -18,10 +18,11 @@
 
 <body>
 
-
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/yandex_analytics' %>
 <%= render 'layouts/author' %>
+
+<a href="<%= url_for(:controller => :pages, :action => :feed, :only_path => false, :format => :rss) %>" id="rss"></a>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
@@ -49,7 +50,7 @@
   <%= yield %>
   <hr>
   <footer>
-    <p>&copy; Company 2012</p>
+    <p>&copy; Artem Ostapetc 2013</p>
   </footer>
 
   <% if @sidebar %>

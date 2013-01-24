@@ -28,7 +28,6 @@
 
     | <i class="icon-calendar"></i> <%= page.created_at.strftime('%B %d, %Y') %>
     | <i class="icon-comment"></i> <%= link_to pluralize(page.comments.count, 'Comment'), page_path(page) + '#comments' %>
-    | <i class="icon-share"></i> <a href="#">39 Shares</a>
   </p>
 
   <hgroup style="margin-top: 5px">
