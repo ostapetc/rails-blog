@@ -259,6 +259,10 @@ body {
     background-color: #333333 !important;
 }
 
+code, pre {
+    font-size: inherit !important;
+}
+
 
 
 
