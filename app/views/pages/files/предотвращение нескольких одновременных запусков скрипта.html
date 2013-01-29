@@ -7,7 +7,7 @@
 $file = fopen("someCommandName.lock", 'r+');
 if (!flock($file, LOCK_EX | LOCK_NB))
 {
-    throw new CException("Another task working with this command now");
+    throw new CException("Another task is working with this command now");
 }
 
 //Тут выполняем основной код.
@@ -53,7 +53,7 @@ class LockCronTaskBehavior extends CConsoleCommandBehavior
 
         if (!flock($this->file_handler, LOCK_EX | LOCK_NB))
         {
-            throw new CException("Another task working with this command now");
+            throw new CException("Another task is working with this command now");
         }
     }
 
