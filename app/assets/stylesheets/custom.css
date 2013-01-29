@@ -264,6 +264,10 @@ h1 {
     margin-top: 0 !important;
 }
 
+h1 a {
+    text-decoration: none !important;
+}
+
 
 
 
