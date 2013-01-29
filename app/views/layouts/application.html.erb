@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<%= content_for?(:description) %>">
-  <meta name="author" content="<%= content_for?(:author) %>">
-
   <%
   title = content_for(:title)
+  title = 'Артем Остапец | Блог о Web разработке' if title.length.zero?
   %>
-  <title><%=  title.length > 0 ? title : 'Артем Остапец' %></title>
+  <title><%= title %></title>
+  <meta name="description" content="<%= title %>">
+  <meta name="author" content="<%= title %>">
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
