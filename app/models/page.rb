@@ -27,7 +27,8 @@ class Page < ActiveRecord::Base
 
   def text_content
     if self.text_file
-      File.new("#{Rails.root}/app/views/pages/files/#{self.text_file}").read
+      file_path = "#{Rails.root}/app/views/pages/files/#{self.text_file}"
+      File.exists?(file_path) ? File.new(file_path).read : "file does not exists"
     else
       text
     end

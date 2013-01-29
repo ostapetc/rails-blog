@@ -1,0 +1,327 @@
+**автор: Ilia Alshanetsky - @iliaa**
+<a href="http://joind.in/7791">слайды тут http://joind.in/7791</a>
+
+####Эволюционный прогресс####
+
+<img src="http://s001.radikal.ru/i193/1301/e8/cc5d740087e0.jpg" title="Эволюционный прогресс" />
+**Array Dereferencing (наконец-то!!)**
+Теперь мы можем извлекать значения массива(который вернула функция) напрямую, не используя временные переменные.
+
+<pre class="prettyprint">
+$a = "hello world";
+echo explode(" ", $a)[0]; // выведет hello
+
+function test()
+{
+    return array("test" => array("foo" => "bar"));
+}
+
+echo test()['test']['foo']; // выведет bar
+</pre>
+
+
+<?= "теперь короткая запись тегов работает всегда" ?>
+<?= "никаких дополнительных ini настроек" ?>
+
+
+**Компактный синтаксис массивов**
+
+<pre class="prettyprint">
+$a = [1, 2, 3];
+// равнозначен массиву (1, 2, 3);
+
+$b = ['a' => 'b', 'x' => 'y'];
+// тоже самое что ('a' =>'b', 'x' => 'y');
+</pre>
+{CUT}
+**JSON Serialization Helper С помощью jsonSerializable interface**
+
+<pre class="prettyprint">
+class myClass implements JsonSerializable
+{
+    private $data, $multiplier;
+
+    public function __construct($a, $b)
+    {
+        $this->data = $a;
+        $this->multiplier = $b;
+    }
+
+    public function ***jsonSerialize***()
+    {
+        return array_fill(0, $this->multiplier, $this->data);
+    }
+}
+
+echo json_encode(new myClass(123, 3));
+// выведет [123,123,123]
+</pre>
+
+**Native Session Handler Interface**
+
+<pre class="prettyprint">
+MySessionHandler implements SessionHandlerInterface
+{
+    /* Methods */
+    public int close (void)
+    public int destroy (string $sessionid)
+    public int gc (int $maxlifetime)
+    public int open (string $save_path , string $sessionid)
+    public string read (string $sessionid)
+    public int write (string $sessionid , string $sessiondata)
+}
+
+session_set_save_handler(new MySessionHandler);
+</pre>
+
+или так
+
+<pre class="prettyprint">
+session_set_save_handler(
+    array($session_handler_object, "open"),
+    array($session_handler_object, "close"),
+    array($session_handler_object, "read"),
+    array($session_handler_object, "write"),
+    array($session_handler_object, "destroy"),
+    array($session_handler_object, "gc")
+);
+</pre>
+
+**Callable Type-Hint**
+
+<pre class="prettyprint">
+function doSomething(callable $x)
+{
+    return $x();
+}
+</pre>
+
+все что ниже будет работать:
+
+<pre class="prettyprint">
+doSomething(function () { });
+doSomething("function_name");
+doSomething(['class', 'staticMethodName']);
+doSomething([$object, 'methodName']);
+doSomething($invokableObject);
+</pre>
+
+**$this в анонимных функциях**
+
+<pre class="prettyprint">
+class foo
+{
+    function test()
+    {
+        echo "Foo walks into a bar...";
+    }
+
+    function anonFunc()
+    {
+        return function() { $this->test(); };
+    }
+}
+
+class bar
+{
+    public function __construct(foo $o)
+    {
+        $a = $o->anonFunc();
+        $a();
+    }
+}
+
+new bar(new foo); // выведет “Foo walks into a bar...”
+</pre>
+
+**Высокая точность таймера**
+
+`$_SERVER['REQUEST_TIME_FLOAT'] - микросекундная точностью (float)`
+
+<pre class="prettyprint">
+// < 5.4
+$start = microtime(1);
+/* какой то код */
+echo "заняло: ", (microtime(1) - $start);
+// >= 5.4
+/* какой то код */
+echo "заняло: ", (microtime(1) - $_SERVER['REQUEST_TIME_FLOAT']);
+</pre>
+
+**Traits**
+Так же известны как :  множественное наследование, горизонтальное повторное использование.
+
+`простой пример:`
+
+<pre class="prettyprint">
+trait Hello
+{
+    public function hello()
+    {
+        return "Hello";
+    }
+}
+
+trait City
+{
+    public function city($name)
+    {
+        return $name;
+    }
+}
+
+class Welcome
+{
+    use Hello, City;
+}
+
+$c = new Welcome();
+echo $c->hello(), ' ', $c->city("Antwerp");
+// выведет "Hello Antwerp"
+</pre>
+
+`пример с переопределением видимости метода примеси:`
+
+
+<pre class="prettyprint">
+trait Hello
+{
+    private function hello($city)
+    {
+        echo "Hello " , $city;
+    }
+}
+
+class Welcome
+{
+    use Hello {  hello as public;  }
+}
+</pre>
+
+**будет работать**
+
+<pre class="prettyprint">
+(new Welcome())->hello("Antwerp");
+</pre>
+
+
+**пример когда используем две примеси с одинаковыми названиями методов**
+
+<pre class="prettyprint">
+trait Who
+{
+    public function msg($name)
+    {
+        return $name;
+    }
+}
+
+trait Hello
+{
+    private function msg()
+    {
+        return "Hello";
+    }
+}
+
+class Welcome
+{
+    use Who, Hello
+    {
+        hello::msg as public hi;
+        Who::msg insteadof Hello;
+    }
+}
+
+$w = new Welcome();
+echo $w->hi(), ' ', $w->msg("Antwerp");
+// выведет "Hello Antwerp"
+</pre>
+
+**идентификация Traits с помощью рефлексии**
+
+<pre class="prettyprint">
+trait Hello
+{
+    public function hi() { return 'Hello'; }
+}
+
+class Welcome
+{
+    use Hello { hello::hi as public hello; }
+}
+
+$rc = new ReflectionClass('Welcome');
+if (!$rc->isTrait())
+{
+    echo $rc->getTraitNames()[0];         // выведет "Hello"
+    echo $rc->getTraitAliases()['hello']; // выведет "hello::hi"
+
+    foreach ($rc->getTraits() as $v)
+    {
+        echo $v->getMethods()[0]->class, ' <> ',
+        $v->getMethods()[0]->name; // выведет "hello <> hi"
+    }
+}
+</pre>
+
+**Встроенный web сервер**
+`
+s@os-Lenovo-G780:$ php -S localhost:8080 -t /tmp/web router.php
+PHP 5.4.9-4~precise+1 Development Server started at Mon Jan 28 16:23:14 2013
+Listening on http://localhost:8080
+Document root is /tmp/web
+Press Ctrl-C to quit.
+`
+
+***Прогресс при загрузке файлов на сессиях***
+<pre class="prettyprint">
+`<form action="" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name= "<?php echo ini_get('session.upload_progress.name'); ?>" value="progress_tracker">
+    <input type="file" name="my_file">
+    <input type="submit" value="Upload">
+</form>`
+</pre>
+
+<pre class="prettyprint">
+$_SESSION["progress_tracker"] = array(
+    "start_time"      => 1234567890, // время начала загрузки
+    "content_length"  => 57343257,   // длинна POST запроса
+    "bytes_processed" => 453489,     // кол-во загруженных байтов (всех файлов)
+    "done"            => false,      // завершена ли загрузка (всех файлов)
+    "files" => array(
+        0 => array(
+            "field_name"      => "my_file",        // имя переменной
+            "name"            => "sample.text",    // название загружаемого файла
+            "tmp_name"        => "/tmp/phpxxxxxx", // путь на диске
+            "error"           => 0,
+            "done"            => false,            // завершена ли загрузка (конкретного файла)
+            "start_time"      => 1234567890,       // время начала загрузки (конкретного файла)
+            "bytes_processed" => 57343250,         // кол-во загруженных байтов (конкретного файла)
+        ),
+    )
+);
+</pre>
+
+***Улучшена производительность***
+
+- версия 5.4 самая быстрая из всех версий PHP
+- в среднем все приложения должны быть быстрее на 5-20%
+- Static benchmarks показывают прирост скорости на 15-20%
+- Потребление памяти уменьшено на 25%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
