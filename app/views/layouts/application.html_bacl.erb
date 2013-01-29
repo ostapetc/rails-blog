@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%
   title = content_for(:title)
-  title = 'Артем Остапец | Блог о Web разработке' if title.length.zero?
+  title = 'Артем Остапец | Блог о Web разработке' if title.length.zer
   %>
   <title><%=   %></title>
   <meta name="description" content="<%= content_for?(:description) %>">
@@ -20,6 +20,7 @@
 
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/yandex_analytics' %>
+<%= render 'layouts/author' %>
 
 <a href="<%= url_for(:controller => :pages, :action => :feed, :only_path => false, :format => :rss) %>" id="rss"></a>
 
@@ -31,6 +32,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
+      <!--<a class="brand" href="/" style="font-weight: bold">Artem Os.</a>-->
+
       <div class="nav-collapse collapse">
         <%= render partial: 'layouts/menu' %>
       </div>
@@ -38,26 +41,21 @@
   </div>
 </div>
 
-<div class="container" style="width: 1200px">
-  <div class="row">
-    <div class="span2" style="min-width: 241px">
-      <div class="well sidebar-nav">
-        <%= render 'layouts/author' %>
+<div class="container" id="content">
+  <% if notice %>
+      <div class="alert">
+        <%= notice %>
       </div>
-    </div>
-    <div class="span8" id="content">
-        <%= yield %>
-    </div>
-    <div class="span2" style="min-width: 219px">
-      <% if @sidebar %>
-          <%= render partial: @sidebar %>
-      <% end %>
-    </div>
-  </div>
+  <% end %>
+  <%= yield %>
   <hr>
   <footer>
-    <p>© Company 2012</p>
+    <p>&copy; Artem Ostapetc 2013</p>
   </footer>
+
+  <% if @sidebar %>
+      <%= render partial: @sidebar %>
+  <% end %>
 </div>
 
 <!--[if lt IE 9]>

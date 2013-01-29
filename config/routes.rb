@@ -1,4 +1,7 @@
 Homepage::Application.routes.draw do
+  get "users/manage"
+  get "comments/manage"
+
   root :to => 'pages#index'
 
   match '/badges'               => 'pages#badges'

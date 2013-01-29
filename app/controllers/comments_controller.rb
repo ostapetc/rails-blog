@@ -41,4 +41,11 @@ class CommentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  #GET /comments/manage
+  def manage
+    @comments = Comment.all(:order => 'created_at desc')
+    render :layout => 'application'
+  end
 end

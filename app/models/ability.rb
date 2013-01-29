@@ -28,9 +28,11 @@ class Ability
     can [:read, :badges, :feed], Page
     can [:read, :create], Comment
 
-    if user.role == 'admin'
+    if user.admin?
       can [:read, :create, :update, :destroy, :detectTags], Page
       can [:index, :create, :update, :destroy, :edit, :fix_counters], Tag
+      can [:manage], User
+      can [:manage], Comment
     end
   end
 end

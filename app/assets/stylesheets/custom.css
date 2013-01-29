@@ -163,10 +163,7 @@ a.contact{
 }
 
 div.author {
-    position: absolute;
-    left: 20px;
-    top: 65px;
-    width: 200px;
+
 }
 
 div.author a {
@@ -176,12 +173,6 @@ div.author a {
 a:hover {
     background-color: inherit !important;
     text-decoration: none !important;
-}
-
-.tags-sidebar {
-    position: absolute;
-    right: 20px;
-    top: 65px;
 }
 
 a.uppercase {
@@ -261,6 +252,16 @@ body {
 
 code, pre {
     font-size: inherit !important;
+}
+
+.tags-sidebar a{
+    color: #333333;
+    font-weight: bold;
+}
+
+h1 {
+    line-height: 30px !important;
+    margin-top: 0 !important;
 }
 
 

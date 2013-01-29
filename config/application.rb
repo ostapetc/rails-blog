@@ -60,3 +60,9 @@ module Homepage
     config.assets.version = '1.0'
   end
 end
+
+def logg(obj)
+  puts ('-' * 50)
+  puts obj.to_s
+  puts ('-' * 50)
+end

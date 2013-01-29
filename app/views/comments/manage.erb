@@ -1,0 +1,20 @@
+<h1>Comments management</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Text</th>
+    <th>User</th>
+    <th>Created at</th>
+    <th>Page</th>
+  </tr>
+  <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.id %></td>
+        <td><%= comment.text %></td>
+        <td><%= comment.user_name %></td>
+        <td><%= l comment.created_at, :format => :long %></td>
+        <td><%= comment.page.title %></td>
+      </tr>
+  <% end %>
+</table>
