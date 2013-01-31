@@ -98,11 +98,11 @@ class PagesController < ApplicationController
   # GET /pages/1
   def detectTags
     @page  = Page.find(params[:id])
-    text   = @page.text_content
+    text   = @page.text_content.downcase
     result = []
 
     Tag.all.each do |tag|
-      if text.include? tag.name
+      if text.include? tag.name.mb_chars.downcase!
         result.push tag.id
       end
     end

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90d516b7-57fa-434d-9dc1-cda539f6f04f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/pages/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="homepage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359635670411" ignored="false" />
+    <file path="/Dummy.txt" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359637583291" ignored="false" />
     <file path="/ability.rb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359463500327" ignored="false" />
     <file path="/_page.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358800207636" ignored="false" />
     <file path="/prettify.js" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1357899825280" ignored="false" />
@@ -21,7 +20,7 @@
     <file path="/application.html.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359466748920" ignored="false" />
     <file path="/_badges.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1357908677730" ignored="false" />
     <file path="/_author.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1357994040261" ignored="false" />
-    <file path="/pages_controller.rb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358880245097" ignored="false" />
+    <file path="/pages_controller.rb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359638253565" ignored="false" />
     <file path="/routes.rb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359463694201" ignored="false" />
     <file path="/badges.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1357994196360" ignored="false" />
     <file path="/_menu.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359463510683" ignored="false" />
@@ -73,62 +72,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="267" column="36" selection-start="4380" selection-end="4380" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PHP Benelux conference - введение в PHP 5.4(.11).html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/PHP Benelux conference - введение в PHP 5.4(.11).html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Денежные операции в Ruby.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.41438848">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="58" selection-start="660" selection-end="660" vertical-scroll-proportion="9.428572">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Множественное наследование в PHP с помощью Traits.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="339" selection-end="364" vertical-scroll-proportion="-8.571428">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="предотвращение нескольких одновременных запусков скрипта.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/предотвращение нескольких одновременных запусков скрипта.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="21" selection-start="1880" selection-end="1880" vertical-scroll-proportion="-9.392858">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -146,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/manage.html.erb" />
         <option value="$PROJECT_DIR$/app/models/ability.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_menu.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -162,6 +105,7 @@
         <option value="$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html" />
+        <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
       </list>
     </option>
   </component>
@@ -294,6 +238,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artemos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,13 +511,18 @@
       <created>1359468321210</created>
       <updated>1359468321210</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new article. improve form">
+      <created>1359637585312</created>
+      <updated>1359637585312</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1602" height="905" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -570,7 +537,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -614,7 +580,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix articles grammar" />
+    <option name="LAST_COMMIT_MESSAGE" value="new article. improve form" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -631,6 +597,7 @@
     <MESSAGE value="fix meta tags" />
     <MESSAGE value="improve comments" />
     <MESSAGE value="fix articles grammar" />
+    <MESSAGE value="new article. improve form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -638,11 +605,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_menu.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="62" selection-start="1428" selection-end="1428" vertical-scroll-proportion="-15.428572" />
@@ -695,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/files/PHP Benelux conference - введение в PHP 5.4(.11).html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="339" selection-end="364" vertical-scroll-proportion="-8.571428">
@@ -725,7 +680,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.41438848">
+        <state line="27" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="-10.285714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="26" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.6413044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/files/PHP Benelux conference - введение в PHP 5.4(.11).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
