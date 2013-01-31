@@ -18,6 +18,13 @@
                 }
               });
           });
+
+          $('#page_text_file').change(function() {
+              if (!$('#page_title').val().length) {
+                  var title = $(this).val().replace('.html', '');
+                  $('#page_title').val(title);
+              }
+          });
       });
     </script>
 <% end %>

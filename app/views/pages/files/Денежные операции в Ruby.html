@@ -1,0 +1,60 @@
+**Не используйте тип float для подсчета денежных операций, он не годится для точного расчета.**
+
+<pre class="prettyprint" xmlns="http://www.w3.org/1999/html">
+irb(main):001:0> 200 * (7.0/100)
+=> 14.000000000000002
+</pre>
+
+7% от 200 должно быть 14, но float возвращает 14.000000000000002.
+
+Давайте убедимся, что ruby все такие правильно считает и будем использовать класс BigDecimal.
+
+<pre class="prettyprint">
+irb(main):003:0> result = BigDecimal.new(200) * ( BigDecimal.new(7)/BigDecimal.new(100))
+=> #<BigDecimal:7fa5eefa1720,'0.14E2',9(36)>
+irb(main):004:0> result.to_s
+=> "14.0"
+</pre>
+
+Как мы видем BigDecimal возвращает более аккуратный результат.
+
+**Переводим деньги в центы**
+
+<pre class="prettyprint">
+amount  = BigDecimal.new(200) * ( BigDecimal.new(7)/BigDecimal.new(100))
+puts (amount * 100).to_i #=> 1400
+</pre>
+
+Приведенный пример выше верен, но лучше воспользоваться гемом <a href="https://rubygems.org/gems/money">money</a>,
+он позволяет форматировать денежные суммы из типа BigDecimal.
+
+<pre class="prettyprint">
+amount  = BigDecimal.new(200) * ( BigDecimal.new(7)/BigDecimal.new(100))
+amount_in_money = amount.to_money
+puts amount_in_money.cents #выведет 1400
+</pre>
+
+еще примеры:
+
+<pre class="prettyprint">
+money = Money.new(1000, "USD")
+money.cents     #=> 1000
+money.currency  #=> Currency.new("USD")
+
+Money.assume_from_symbol = true
+Money.parse("$100") == Money.new(10000, "USD")
+Money.parse("€100") == Money.new(10000, "EUR")
+Money.parse("£100") == Money.new(10000, "GBP")
+
+some_code_to_setup_exchange_rates
+Money.new(1000, "USD").exchange_to("EUR") == Money.new(some_value, "EUR")
+</pre>
+
+Если вы хотите делать точные расчеты, то все элементы должны быть типа BigDecimal или Money, лучше когда одного типа.
+
+
+
+
+
+
+
