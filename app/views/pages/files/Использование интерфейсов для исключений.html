@@ -24,7 +24,7 @@ catch (MyException $e)
 PHP имеет ряд недостатков с точки зрения расширения базового класса исключений, а именно, что вы не можете наследоваться
 от несколько классов.
 PHP ищет пути решения некоторых из этих проблем с помощью traits(), но traits не typehintable:
-
+{CUT}
 <pre class="prettyprint">
 trait SomeTrait {}
 
@@ -37,7 +37,7 @@ $a = new SomeClass();
 
 var_dump(is_a($a,'SomeTrait'));
 </pre>
-{CUT}
+
 **Ожидаемый результат:**
 bool(true)
 
