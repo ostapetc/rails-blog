@@ -5,6 +5,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     provider :facebook, '535660163125389', '07e64c4bb098d121f9d0aa1d75a45c73'
   end
 
-  provider :vkontakte, '3379172', 'vtqWid7LraX9QqXeW4tM'
+  provider :vkontakte, '3396506', 'rC70joyvq0Nce9nZv0Lk'
   provider :twitter, 'cK2MIFVXOpertDdfk495nA', 'NtAoUvTt9BSkjAUeIxEySE00LBrhxpPVfFpjF2endM'
 end

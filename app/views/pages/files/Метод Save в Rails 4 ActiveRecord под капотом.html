@@ -1,0 +1,145 @@
+http://blog.bigbinary.com/2013/01/15/live-of-save-in-activerecord.html
+
+**Все о чем будет говориться в этом посте косается только Rails версии 4**
+
+In a RubyonRails application we save records often. It is one of the most used methods in ActiveRecord.
+In the blog we are going to take a look at the lifecycle of save operation.
+
+В приложениях RubyonRails мы часто используем метод save, это один из самых используемых методов класса ActiveRecord.
+Ниже будет рассмотрен жизненный цикл данного метода.
+
+**ActiveRecord::Base**
+
+Так выглядит типичная модель:
+
+class Article < ActiveRecord::Base
+end
+
+Тепрь заглянем внуть класса ActiveRecord::Base:
+
+module ActiveRecord
+    class Base
+        extend ActiveModel::Naming
+
+        extend ActiveSupport::Benchmarkable
+        extend ActiveSupport::DescendantsTracker
+
+        extend ConnectionHandling
+        extend QueryCache::ClassMethods
+        extend Querying
+        extend Translation
+        extend DynamicMatchers
+        extend Explain
+
+        include Persistence
+        include ReadonlyAttributes
+        include ModelSchema
+        include Inheritance
+        include Scoping
+        include Sanitization
+        include AttributeAssignment
+        include ActiveModel::Conversion
+        include Integration
+        include Validations
+        include CounterCache
+        include Locking::Optimistic
+        include Locking::Pessimistic
+        include AttributeMethods
+        include Callbacks
+        include Timestamp
+        include Associations
+        include ActiveModel::SecurePassword
+        include AutosaveAssociation
+        include NestedAttributes
+        include Aggregations
+        include Transactions
+        include Reflection
+        include Serialization
+        include Store
+        include Core
+    end
+
+    ActiveSupport.run_load_hooks(:active_record, Base)
+end
+
+Базовый класс наследует и включает множетсво модулей. Мы рассмотрим 4 из них, которые исмпользует метод save.
+
+module ActiveRecord
+    class Base
+        ......................
+        include Persistence
+        .......................
+        include Validations
+        ........................
+        include AttributeMethods
+        ........................
+        include Transactions
+        ........................
+    end
+end
+
+**Модуль Persistence**
+Этот модуль содержит метод:
+
+def save(*)
+    create_or_update
+    rescue ActiveRecord::RecordInvalid
+    false
+end
+
+*рассмотрим метод create_or_update*
+def create_or_update
+    raise ReadOnlyRecord if readonly?
+    result = new_record? ? create_record : update_record
+    result != false
+end
+
+И так данный метод создает или обновляет модель если она не защищена от записи(только для чтения).
+
+**Модуль Validations**
+Этот модуль содержит метод save, внутри которого нет ничего кроме вызова одного метода валидации:
+
+def save(options={})
+    perform_validations(options) ? super : false
+end
+
+**Модуль AttributeMethods**
+Данный модуль включает в себя пачку других модулей:
+
+module ActiveRecord
+    module AttributeMethods
+        extend ActiveSupport::Concern
+            include ActiveModel::AttributeMethods
+            included do
+            include Read
+            include Write
+            include BeforeTypeCast
+            include Query
+            include PrimaryKey
+            include TimeZoneConversion
+            include Dirty
+            include Serialization
+        end
+
+Нас интересует модуль Dirty, который содержит метод save:
+
+def save(*)
+    if status = super
+        @previously_changed = changes
+        @changed_attributes.clear
+    end
+    status
+end
+
+содержимое метода отслеживает измененные значени атрибутов.
+
+
+
+
+
+
+
+
+
+
+

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90d516b7-57fa-434d-9dc1-cda539f6f04f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/files/Unix основы командной строки.html" afterPath="$PROJECT_DIR$/app/views/pages/files/Unix основы командной строки.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/files/Метод Save в Rails 4 ActiveRecord под капотом.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/omniauth.rb" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html" afterPath="$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html" afterPath="$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html" />
     </list>
     <ignored path="homepage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359638273592" ignored="false" />
+    <file path="/Dummy.txt" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359657343915" ignored="false" />
     <file path="/ability.rb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359463500327" ignored="false" />
     <file path="/_page.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1358800207636" ignored="false" />
     <file path="/prettify.js" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1357899825280" ignored="false" />
@@ -59,6 +58,7 @@
     <file path="/Использование денежных сумм в Ruby.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359637165378" ignored="false" />
     <file path="/Денежные операции в Ruby.erb" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359637144969" ignored="false" />
     <file path="/Денежные операции в Ruby.html" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359639128043" ignored="false" />
+    <file path="/Метод Save в Rails 4 ActiveRecord под капотом.html" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359641991246" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,64 +75,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PHP Benelux conference - введение в PHP 5.4(.11).html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/PHP Benelux conference - введение в PHP 5.4(.11).html">
+      <file leaf-file-name="omniauth.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Unix основы командной строки.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Unix основы командной строки.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="5" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-12.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Использование интерфейсов для исключений.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="5" selection-start="963" selection-end="963" vertical-scroll-proportion="-9.428572">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Множественное наследование в PHP с помощью Traits.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="339" selection-end="364" vertical-scroll-proportion="1.7142857">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="предотвращение нескольких одновременных запусков скрипта.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/предотвращение нескольких одновременных запусков скрипта.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="21" selection-start="1880" selection-end="1880" vertical-scroll-proportion="-61.07143">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Удобный процесc разработки c Composer, Namespacing и PHPUnit.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Удобный процесc разработки c Composer, Namespacing и PHPUnit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Денежные операции в Ruby.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="658" selection-end="658" vertical-scroll-proportion="-16.285715">
+            <state line="7" column="55" selection-start="318" selection-end="318" vertical-scroll-proportion="0.23931624">
               <folding />
             </state>
           </provider>
@@ -156,8 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/comments/manage.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_author.erb" />
         <option value="$PROJECT_DIR$/app/views/tags/_sidebar.html.erb" />
@@ -172,14 +116,15 @@
         <option value="$PROJECT_DIR$/app/views/pages/files/Unix основы командной строки.html" />
         <option value="$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html" />
         <option value="$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html" />
+        <option value="$PROJECT_DIR$/app/views/pages/files/Метод Save в Rails 4 ActiveRecord под капотом.html" />
+        <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="-4" />
-    <option name="width" value="1602" />
-    <option name="height" value="905" />
+    <option name="y" value="24" />
+    <option name="width" value="1592" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -237,11 +182,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,41 +196,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homepage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artemos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
+              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,12 +225,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lovdbyless" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -434,13 +345,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -474,6 +378,13 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -527,20 +438,22 @@
       <created>1359638274988</created>
       <updated>1359638274988</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix articles">
+      <created>1359639160205</created>
+      <updated>1359639160205</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1602" height="905" extended-state="6" />
+    <frame x="0" y="24" width="1592" height="875" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29241645" sideWeight="0.6704981" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29624838" sideWeight="0.6704981" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39974457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20437019" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,6 +462,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -592,7 +507,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix tags detector" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix articles" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -611,6 +526,7 @@
     <MESSAGE value="fix articles grammar" />
     <MESSAGE value="new article. improve form" />
     <MESSAGE value="fix tags detector" />
+    <MESSAGE value="fix articles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -618,26 +534,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/comments/manage.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="434" selection-end="434" vertical-scroll-proportion="-4.923077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="34" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.704918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html_bacl.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1613" selection-end="1682" vertical-scroll-proportion="0.6392318" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_author.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="419" selection-end="419" vertical-scroll-proportion="0.32921812" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tags/_sidebar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="66" selection-start="541" selection-end="541" vertical-scroll-proportion="0.52674896" />
@@ -650,70 +546,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="36" selection-start="4380" selection-end="4380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="267" column="36" selection-start="4380" selection-end="4380" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="58" selection-start="660" selection-end="660" vertical-scroll-proportion="9.428572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="26" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.6413044">
-          <folding />
-        </state>
+        <state line="21" column="58" selection-start="660" selection-end="660" vertical-scroll-proportion="9.428572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/PHP Benelux conference - введение в PHP 5.4(.11).html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Денежные операции в Ruby.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="658" selection-end="658" vertical-scroll-proportion="-16.285715">
-          <folding />
-        </state>
+        <state line="19" column="4" selection-start="658" selection-end="658" vertical-scroll-proportion="-16.285715" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Unix основы командной строки.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="5" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-12.0">
-          <folding />
-        </state>
+        <state line="41" column="5" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-12.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Использование интерфейсов для исключений.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="5" selection-start="963" selection-end="963" vertical-scroll-proportion="-9.428572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="339" selection-end="364" vertical-scroll-proportion="1.7142857">
-          <folding />
-        </state>
+        <state line="26" column="5" selection-start="963" selection-end="963" vertical-scroll-proportion="-9.428572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/предотвращение нескольких одновременных запусков скрипта.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="1880" selection-end="1880" vertical-scroll-proportion="-61.07143">
-          <folding />
-        </state>
+        <state line="75" column="21" selection-start="1880" selection-end="1880" vertical-scroll-proportion="-61.07143" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/files/Удобный процесc разработки c Composer, Namespacing и PHPUnit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/gems/1.9.1/gems/activerecord-3.2.8/lib/active_record/transactions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="8" selection-start="10625" selection-end="10625" vertical-scroll-proportion="0.30510753" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/files/Множественное наследование в PHP с помощью Traits.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="339" selection-end="364" vertical-scroll-proportion="-0.06703911" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pages/files/Метод Save в Rails 4 ActiveRecord под капотом.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="70" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="55" selection-start="318" selection-end="318" vertical-scroll-proportion="0.23931624">
           <folding />
         </state>
       </provider>
