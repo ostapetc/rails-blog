@@ -25,7 +25,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can [:read, :badges, :feed], Page
+    can [:read, :badges, :feed, :contacts], Page
     can [:read, :create], Comment
 
     if user.admin?

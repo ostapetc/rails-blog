@@ -1,6 +1,6 @@
-<div class="author">
+<div style="position: fixed">
+  <div class="author">
     <%= image_tag 'me_2.jpg', class: 'img-polaroid', width: 190 %>
-    <%= link_to 'Code School badges', :badges, :class => 'underline'  %>
     <ul class="contact-list">
       <li>
         <a href="skype:+7 965 193-52-32?call" class="contact phone">+7 965 193-52-32</a>
@@ -15,4 +15,10 @@
         <a href="http://www.facebook.com/profile.php?id=1089098831" class="contact facebook">Артем Остапец</a>
       </li>
     </ul>
+  </div>
+
+  <ul class="nav nav-pills nav-stacked well" id="contacts-nav">
+    <li class="active"><a href="resume">Резюме</a></li>
+    <li><a href="badges">Code school badges</a></li>
+  </ul>
 </div>

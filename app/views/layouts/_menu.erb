@@ -4,6 +4,10 @@ items = {
         :url     => root_path,
         :visible => true
     },
+    'Contacts' => {
+        :url     => url_for(:controller => :pages, :action=> :contacts),
+        :visible => true
+    },
     'Tasks' => {
         :url     => tasks_path,
         :visible => (can? :index, Task)

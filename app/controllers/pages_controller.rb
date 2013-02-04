@@ -1,3 +1,6 @@
+require 'nokogiri'
+
+
 class PagesController < ApplicationController
   before_filter :tags_sidebar, only: ['index', 'show']
   load_and_authorize_resource
@@ -18,6 +21,7 @@ class PagesController < ApplicationController
     end
   end
 
+
   # GET /pages/1
   # GET /pages/1.json
   def show
@@ -31,6 +35,7 @@ class PagesController < ApplicationController
     end
   end
 
+
   # GET /pages/new
   # GET /pages/new.json
   def new
@@ -43,11 +48,13 @@ class PagesController < ApplicationController
     end
   end
 
+
   # GET /pages/1/edit
   def edit
     @tags = Tag.all
     @page = Page.find(params[:id])
   end
+
 
   # POST /pages
   # POST /pages.json
@@ -64,6 +71,7 @@ class PagesController < ApplicationController
       end
     end
   end
+
 
   # PUT /pages/1
   # PUT /pages/1.json
@@ -84,6 +92,7 @@ class PagesController < ApplicationController
     end
   end
 
+
   # DELETE /pages/1
   # DELETE /pages/1.json
   def destroy
@@ -94,6 +103,7 @@ class PagesController < ApplicationController
       format.js
     end
   end
+
 
   # GET /pages/1
   def detectTags
@@ -118,12 +128,27 @@ class PagesController < ApplicationController
     end
   end
 
-  #GET my badges
-  def badges
+
+  #GET /contacts
+  def contacts
+    @left_sidebar = 'pages/contacts_sidebar'
+    @badges = getFromCache(:badges, 1.day, 'http://www.codeschool.com/users/157606', 'ul.badges',)
+    @resume = getFromCache(:resume, 7.day, 'http://hh.ru/resume/96a966d8ff00d736bd0039ed1f45503942465a?print=true', '.resume')
   end
+
 
   # setup tags sidebar
   def tags_sidebar
-    @sidebar = 'tags/sidebar'
+    @right_sidebar = 'tags/sidebar'
+  end
+
+
+  def getFromCache(key, expires_in, source_url, selector)
+    value = Rails.cache.read key
+    unless value
+      value = Nokogiri::HTML(open(source_url)).css(selector).to_html
+      Rails.cache.write(key, value, :expires_in => expires_in)
+    end
+    value
   end
 end

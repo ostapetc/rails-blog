@@ -1,0 +1,85 @@
+<style type="text/css">
+    .resume__inlinelist {
+        overflow: hidden;
+        padding-left: 9px;
+        margin-left: -9px;
+    }
+
+    .resume__inlinelist__item {
+        display: inline-block;
+        margin-right: 25px;
+    }
+
+    .resume__inlinelist__item::before {
+        content: '·';
+        display: inline-block;
+        width: 15px;
+        margin-left: -15px;
+    }
+
+    .resume__inlinelist__item::after {
+        content: ' ';
+        display: inline-block;
+        width: 15px;
+        margin-right: -15px;
+    }
+
+    .resume-block__title {
+        border-bottom: 1px solid hsl(0, 0%, 87%);
+        margin-bottom: 10px;
+        margin-right: -20px;
+    }
+
+    .resume-block__title__text {
+        color: hsl(0, 0%, 67%);
+        font-size: 18px;
+        padding-bottom: 2px;
+        border-bottom: 3px solid hsl(0, 0%, 93%);
+    }
+
+    .m-resume-block__title_sub .resume-block__title__text {
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .resume-block {
+        margin-bottom: 20px;
+    }
+
+    #contacts-nav li a:hover {
+        background-color: #9C0001 !important;
+        color:  #FFFFFF !important;
+    }
+</style>
+
+<% content_for :js do %>
+    <script type="text/javascript">
+      $(function() {
+          $('ul.badges img').each(function() {
+              $(this).attr('title', $(this).attr('alt'));
+          });
+
+          $('#contacts-nav a').click(function(e) {
+              e.preventDefault();
+              var el = $('#' + $(this).attr('href'));
+
+              $('#contacts-nav li').removeClass('active');
+              $(this).parent().addClass('active');
+              $('html,body').animate({
+                  scrollTop: el.offset().top - 50
+              }, 'slow');
+          });
+      });
+    </script>
+<% end %>
+
+<h1 id="resume">Резюме (<a class="underline" href="http://hh.ru/resume/96a966d8ff00d736bd0039ed1f45503942465a">hh.ru</a>)</h1>
+<%= raw @resume %>
+
+<br clear="all" />
+<br clear="all" />
+<br clear="all" />
+<h1 style="margin-top: 20px" id="badges">Code school badges</h1>
+
+<%= raw @badges %>

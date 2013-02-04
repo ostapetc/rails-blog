@@ -4,9 +4,10 @@ Homepage::Application.routes.draw do
 
   root :to => 'pages#index'
 
-  match '/badges'               => 'pages#badges'
-  match '/pages/:id/detectTags' => 'pages#detectTags'
-  match '/feed'                 => 'pages#feed'
+  get '/badges'               => 'pages#badges'
+  get '/pages/:id/detectTags' => 'pages#detectTags'
+  get '/feed'                 => 'pages#feed'
+  get '/contacts'             => 'pages#contacts'
 
   match '/auth/:provider/callback' => 'sessions#create', :as => :signing
   match '/sessions/destroy'        => 'sessions#destroy'

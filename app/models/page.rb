@@ -10,9 +10,11 @@ class Page < ActiveRecord::Base
   default_scope order('created_at desc')
   has_attached_file :image, :styles => {medium: '300x300', small: '100x100'}
 
+
   def has_tag(tag_id)
     PageTag.exists?(page_id: self.id, tag_id: tag_id)
   end
+
 
   def update_attributes(attributes, options = {})
     if super(attributes, options)
@@ -25,6 +27,7 @@ class Page < ActiveRecord::Base
     Dir["#{FILES_DIR}*"].map {|f| Pathname.new(f).basename}
   end
 
+
   def text_content
     if self.text_file
       file_path = "#{Rails.root}/app/views/pages/files/#{self.text_file}"
@@ -33,6 +36,7 @@ class Page < ActiveRecord::Base
       text
     end
   end
+
 
   private
   def update_tags(tags)
