@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90d516b7-57fa-434d-9dc1-cda539f6f04f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/contacts.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/application.html_bacl.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/application_back.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/pages/badges.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/pages/me.html.erb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/_author.erb" afterPath="$PROJECT_DIR$/app/views/pages/_contacts_sidebar.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_menu.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_menu.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/page.rb" afterPath="$PROJECT_DIR$/app/models/page.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="90d516b7-57fa-434d-9dc1-cda539f6f04f" name="Default" comment="" />
     <ignored path="homepage.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="90d516b7-57fa-434d-9dc1-cda539f6f04f" time="1359988283202" ignored="false" />
