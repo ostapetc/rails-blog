@@ -1,0 +1,283 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1360161449.0585003:@value"Š[I"|.underline {
+    text-decoration: underline !important;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.container input[type=text], .container textarea, .field_with_errors, select {
+    width: 98% !important;
+}
+
+.field_with_errors {
+    background: none !important;
+}
+
+#error_explanation {
+    border: 1px solid #CC0000 !important;
+}
+
+#error_explanation ul {
+    margin-top: 10px;
+}
+
+.page {
+    margin-bottom: 30px;
+}
+
+.btn {
+    color: #ffffff !important;
+}
+
+.btn:hover {
+    /*background-color: transparent !important;*/
+}
+
+.page hgroup {
+    margin-top: 5px;
+}
+
+.label {
+    min-width: inherit !important;
+    min-height: inherit !important;
+}
+
+h1 a:hover {
+    background-color: inherit !important;
+}
+
+.comment-header {
+    margin-bottom: 5px;
+}
+
+.page-image {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+h1 {
+    font-size: 30px !important;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.navbar-inner {
+    height: 40px !important;
+    min-height: 40px !important;
+}
+
+.navbar .nav > li > a {
+    padding: 5px 15px !important;
+    font-weight: bold;
+    font-size: 13px !important;
+}
+
+body {
+    background-color: white !important;
+}
+
+
+/*Badges*/
+.badges-cluster li:nth-child(2n+1) {
+    clear: left;
+}
+.badges-cluster li {
+    -moz-box-sizing: border-box;
+    float: left;
+    margin: 20px 0 40px;
+    min-height: 89px;
+    padding-left: 130px;
+    position: relative;
+    width: 48%;
+}
+.badges li {
+    display: inline;
+    margin-right: 20px;
+}
+.card-b, .prereqs {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+
+.badges-cluster li .course-badge, .badges-cluster li .badges-show .achievement .awarded, .badges-show .achievement .badges-cluster li .awarded {
+    display: block;
+    left: -15px;
+    margin: 0;
+    position: absolute;
+    top: -15px;
+}
+.badges li img {
+    background: none repeat scroll 0 0 #F7F5EE;
+    border: 1px solid #D1CDC2;
+    border-radius: 100px 100px 100px 100px;
+    margin: 0 0 10px;
+    padding: 2px;
+}
+.course-badge, .badges-show .achievement .awarded {
+    background: none repeat scroll 0 0 #F7F5EE;
+    border: 1px solid #D1CDC2;
+    border-radius: 100px 100px 100px 100px;
+    padding: 2px;
+}
+
+/*Author box*/
+a.contact{
+    background-repeat: no-repeat;
+    padding-left: 30px !important;
+    text-decoration: none !important;
+}
+
+.contact.phone {
+    background-image: url('phone.png');
+}
+
+.contact.skype {
+    background-image: url('skype.png');
+}
+
+.contact.email {
+    background-image: url('email.png');
+}
+
+.contact.facebook {
+    background-image: url('facebook.png');
+}
+
+.contact-list {
+    list-style: none;
+    margin-left: 2px !important;
+    margin-top: 5px;
+}
+
+.contact-list li {
+
+}
+
+.author img{
+    margin-bottom: 10px;
+}
+
+div.author {
+
+}
+
+div.author a {
+    color: #000000 !important;
+}
+
+a:hover {
+    background-color: inherit !important;
+    text-decoration: none !important;
+}
+
+a.uppercase {
+    text-transform: uppercase;
+    color: ghostwhite !important;
+}
+
+ul.nav a:hover {
+    color: #c0c0c0 !important;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus {
+    background-color: black !important;
+}
+
+.well {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.label, .badge {
+    font-size: 11px !important;
+}
+
+.tag-li span {
+    float: right;
+    margin-left: 7px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.tag-li span {
+    font-size: 9px !important;
+    padding: 3px 7px;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover {
+    background-color: #333333 !important;
+    color: #FFFFFF !important;
+}
+
+.nav-list > .active > a > span {
+    background-color: #f0f0f0 !important;
+    color: #333333 !important;
+}
+
+#content a:not(.btn) {
+    color: #44413d;
+    text-decoration: underline;
+}
+#content a:hover:not(.btn) {
+    color: #1c1a19;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#rss {
+    width: 16px;
+    height: 16px;
+    background-image: url('rss2.png');
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 10000;
+}
+
+#rss:hover {
+    background-color: #333333 !important;
+}
+
+code, pre {
+    font-size: inherit !important;
+}
+
+.tags-sidebar a{
+    color: #333333;
+    font-weight: bold;
+}
+
+h1 {
+    line-height: 30px !important;
+    margin-top: 0 !important;
+}
+
+h1 a {
+    text-decoration: none !important;
+}
+
+.badges a {
+    text-decoration: none !important;
+}
+
+.top-menu {
+    opacity: 0.95;
+}
+
+
+
+
+
+:EF

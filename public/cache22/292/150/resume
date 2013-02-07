@@ -1,0 +1,121 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_inf6.048e5:@created_atf1360225471.9382474:@value"�+I"�+<div class="g-col1 m-colspan3 resume" itemscope="itemscope" itemtype="http://schema.org/Person">
+<div class="nopaddings resume__mainblock g-round m-round_5"><div class="resume__mainblock__main m-resume__mainblock__main_noaside">
+<div class="resume__personal">
+<div class="resume__personal__name" itemprop="name">Остапец Артем Игоревич</div>
+<div class="resume__inlinelist">
+<span class="resume__inlinelist__item"><strong>27 лет</strong> (18 сентября 1985<meta itemprop="birthDate" content="1985-09-18">)</span><span class="resume__inlinelist__item"><strong itemprop="gender">Мужской</strong> пол</span><span class="resume__inlinelist__item" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress"><strong itemprop="addressLocality">Москва</strong>, <span style="color:#999">м. Петровско-Разумовская</span>, готов к переезду</span><span class="resume__inlinelist__item">Готов к командировкам</span>
+</div>
+</div>
+<hr class="resume__contacts_divider">
+<div class="resume__contacts" itemprop="contactPoints" itemscope="itemscope" itemtype="http://schema.org/ContactPoint">
+<div><div class="resume__contacts__preferred g-round m-round_10"><div class="resume__contacts__phone">
+<span class="resume__contacts__phone__number" itemprop="telephone">
+                        +7 965 1935232</span><span class="resume__contacts__preferred__hint">желаемый способ связи</span>
+</div></div></div>
+<div class="resume__inlinelist">
+<span class="resume__inlinelist__item"><span><span><a href="mailto:artemostapetc@gmail.com" itemprop="email">artemostapetc@gmail.com</a></span></span></span><span class="resume__inlinelist__item"><span class="resume__contacts__personalsite siteicon m-siteicon_skype">artemostapetc</span></span>
+</div>
+</div>
+<hr class="resume__contacts_divider noscreen">
+</div></div>
+<div class="resume-block">
+<div class="resume-block__title"><div class="resume-block__title__text"><span>Желаемая должность и зарплата</span></div></div>
+<div class="resume__position__title" itemprop="jobTitle">Senior PHP Developer, Yii</div>
+<div class="resume__position__specialization">Информационные технологии, интернет, телеком<ul>
+<li class="resume__position__specialization_item">Программирование, Разработка</li>
+<li class="resume__position__specialization_item">Системы управления предприятием (ERP)</li>
+<li class="resume__position__specialization_item">Web инженер</li>
+</ul>
+</div>Полная занятость,  Полный день</div>
+<div class="resume-block">
+<div class="resume-block__title"><div class="resume-block__title__text"><span>Опыт работы 5 лет 5 месяцев</span></div></div>
+<div class="resume__experience">
+<div class="resume__experience__item" itemprop="worksFor" itemscope="itemscope" itemtype="http://schema.org/Organization">
+<div>Декабрь 2011 — по настоящее время<span class="resume__experience__timeinterval"> (1 год 3 месяца)</span>
+</div>
+<div>
+<strong itemprop="name">Itella Connexions, DM/CRM агентство</strong> (<span itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Москва</span></span>, <span><a class="resume__experience__url" href="http://www.itellaconnexions.ru" itemprop="url">www.itellaconnexions.ru</a></span>) <span class="resume__experience__industry"> — <span itemprop="description">Маркетинг/реклама/PR</span></span>
+</div>
+<div><strong>Web разработчик</strong></div>
+<div class="resume__experience__desc" onclick="
+                return {types:['{HH}.Linkify']}
+            ">Разработка CRM систем на основе Yii Framework для топовых брендов(Royal Canin, Filip moris, Audi, Peugeot, OBI)<br xmlns=""><br xmlns="">Система обработки, выдачи пластиковых накопительных карт<br xmlns="">Системы рассылок <br xmlns="">DDE (с работой офлайн и дальнейшей синхронизацией)<br xmlns="">Тикет система <br xmlns="">Телемаркетинг<br xmlns="">Система доставки призов<br xmlns="">Парсинг и обработка большого кол-ва документов с помощью java<br xmlns="">Оптимизация запросов и структуры БД<br xmlns="">Программа мотивации для заводчиков<br xmlns=""><br xmlns="">Code review подрядчиков.</div>
+<script type="text/javascript">
+                (function(){
+                    HH=window.HH||{};HH.cid=HH.cid?HH.cid+1:1;
+                    document.write('<script id="c' + HH.cid + '"> </scr'+'i'+'pt>');
+                    var c = document.getElementById('c' + HH.cid).previousSibling;
+                    try { while (c.nodeType != 1 || c.tagName.toLowerCase() == 'script') c = c.previousSibling;
+                    c.id = 'component_' + HH.cid;
+                    HH.comps=HH.comps||[];HH.comps.push(c.id);
+                    }catch(e){};
+                })();
+                </script>
+</div>
+<div class="resume__experience__item" itemprop="worksFor" itemscope="itemscope" itemtype="http://schema.org/Organization">
+<div>Октябрь 2007 — по настоящее время<span class="resume__experience__timeinterval"> (5 лет 5 месяцев)</span>
+</div>
+<div>
+<strong itemprop="name">АВИМ</strong> (<span itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Москва</span></span>, <span><a class="resume__experience__url" href="http://avim.ru" itemprop="url">avim.ru</a></span>) <span class="resume__experience__industry"> — <span itemprop="description">Информационные технологии/системная интеграция</span></span>
+</div>
+<div><strong>Старший программист</strong></div>
+<div class="resume__experience__desc" onclick="
+                return {types:['{HH}.Linkify']}
+            ">Разработка разного рода сайтов, CRM систем на основе Zend Framework<br xmlns=""><br xmlns="">Разработал внутреннюю CRM для автоматизации работы менеджеров по продаже. CRM по автоматизации предприятия(хранение, доставка, уничтожение документов) с интеграцией с 1С. CMS компании (надстройка над Zend Framework, код генератор итд.)</div>
+<script type="text/javascript">
+                (function(){
+                    HH=window.HH||{};HH.cid=HH.cid?HH.cid+1:1;
+                    document.write('<script id="c' + HH.cid + '"> </scr'+'i'+'pt>');
+                    var c = document.getElementById('c' + HH.cid).previousSibling;
+                    try { while (c.nodeType != 1 || c.tagName.toLowerCase() == 'script') c = c.previousSibling;
+                    c.id = 'component_' + HH.cid;
+                    HH.comps=HH.comps||[];HH.comps.push(c.id);
+                    }catch(e){};
+                })();
+                </script>
+</div>
+</div>
+<div class="dotseparator" style="margin-right:-20px;margin-bottom:30px"> </div>
+<div class="resume__twocols"><div class="resume__twocols_cell">
+<div class="resume-block__title m-resume-block__title_sub"><div class="resume-block__title__text"><span>Ключевые навыки</span></div></div>
+<div onclick="
+                    return {types:['{HH}.Linkify']}
+                ">Основные навыки:<br xmlns=""><br xmlns="">php, Zend Framework, Yii Framework, MySQL (triggers, procedures, views), phpunit, selenium, <br xmlns="">Javascript, JQuery, JQueryMobile, AJAX, Linux(приходится администрировать, пользуюсь как основной ОС),<br xmlns="">HTML, XML, CSS, XML, SOAP<br xmlns=""><br xmlns="">Знание и понимание шаблонов проектирования. Хороший код. Высокая скорость разработки.<br xmlns=""><br xmlns="">Системы контроля версий: Subversion, Git<br xmlns=""><br xmlns="">API: assist, robokassa, facebook, vkontakte, youtube, google maps, yandex maps<br xmlns=""><br xmlns="">Имел опыт c:<br xmlns="">Java SE, Java EE, Ruby on rails, Django, интеграция c 1C<br xmlns=""><br xmlns="">Интересуюсь Ruby, ROR, NOSQL.<br xmlns=""><br xmlns="">Страсть к обучению и изучению новых технологий.<br xmlns=""><br xmlns="">Свой каркас на основе Yii Framework:<br xmlns="">https://github.com/ostapetc/Yii-CMS-2.0</div>
+<script type="text/javascript">
+                (function(){
+                    HH=window.HH||{};HH.cid=HH.cid?HH.cid+1:1;
+                    document.write('<script id="c' + HH.cid + '"> </scr'+'i'+'pt>');
+                    var c = document.getElementById('c' + HH.cid).previousSibling;
+                    try { while (c.nodeType != 1 || c.tagName.toLowerCase() == 'script') c = c.previousSibling;
+                    c.id = 'component_' + HH.cid;
+                    HH.comps=HH.comps||[];HH.comps.push(c.id);
+                    }catch(e){};
+                })();
+                </script>
+</div></div>
+</div>
+<div class="resume-block">
+<div class="resume-block__title"><div class="resume-block__title__text"><span>Образование</span></div></div>
+<table style="margin-bottom:10px"><tr>
+<td style="padding-right:20px">2007</td>
+<td style="padding-bottom:10px" itemprop="alumniOf" itemscope="itemscope" itemtype="http://schema.org/EducationalOrganization">
+<div itemprop="name">Киевский Европейский Университет ЕУФИМБ</div>
+<div class="resume__education__org">Информационные системы и технологии</div>
+</td>
+</tr></table>
+<div class="resume-block">
+<div class="resume-block__title m-resume-block__title_sub"><div class="resume-block__title__text"><span>Знание языков</span></div></div>
+<div>Русский — родной</div>
+<div>Английский — читаю профессиональную литературу</div>
+</div>
+</div>
+<div class="resume-block__title"><div class="resume-block__title__text"><span>Гражданство, время в пути до работы</span></div></div>
+<div>
+<div class="resume__additional-item">Гражданство: <span itemprop="nationality" itemscope="itemscope" itemtype="http://schema.org/Country"><span itemprop="name">Россия</span></span>
+</div>
+<div class="resume__additional-item">Разрешение на работу: Россия</div>
+<div class="resume__additional-item">Желательное время в пути до работы: <span style="text-transform:lowercase">Не более часа</span>
+</div>
+</div>
+</div>
+:ET
