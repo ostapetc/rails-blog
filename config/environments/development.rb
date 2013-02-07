@@ -6,7 +6,7 @@ Homepage::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  config.cache_store = :file_store, "#{Rails.root}/public/cache22"
+  config.cache_store = :file_store, "#{Rails.root}/public/cache"
 
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true

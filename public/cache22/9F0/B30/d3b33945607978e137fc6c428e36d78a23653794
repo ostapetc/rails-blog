@@ -1,6 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1360154672.0115564:@value"[I"xwindow.tinyMCEPreInit = window.tinyMCEPreInit || {
-  base:   '/assets/tinymce',
-  query:  '3.5.8',
-  suffix: ''
-};
-:EF
