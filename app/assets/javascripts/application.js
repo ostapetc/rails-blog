@@ -20,4 +20,15 @@
 $(function() {
     $('.pagination').transformRailsPagination();
     prettyPrint();
+
+    $('#sph-top-link').click(function(e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: $('body').offset().top
+        }, 'slow');
+
+//        $('html,body').animate({
+//            scrollTop: el.offset().top
+//        }, 'slow');
+    });
 });

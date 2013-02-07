@@ -64,5 +64,20 @@ items = {
         <% end %>
       </ul>
     </li>
+    <li id="search" class="li-right">
+        <a href="">search</a>
+    </li>
+    <li id="sph-rss-link" class="li-right">
+      <a title="Subscribe to my RSS Feed" href="<%= url_for(:controller => :pages, :action => :feed, :only_path => false, :format => :rss) %>">Subscribe via RSS!</a>
+    </li>
+    <li id="sph-top-link" class="li-right">
+      <a>top</a>
+    </li>
+    <li id="sph-facebook-link" class="li-right social">
+      <a title="Like us on Facebook!" href="http://www.facebook.com/profile.php?id=1089098831">Like us on Facebook!</a>
+    </li>
+    <li id="sph-twitter-link" class="li-right social">
+      <a title="Follow us on Twitter!" href="https://twitter.com/ArtemOstapetc">Follow us on Twitter!</a>
+    </li>
   </ul>
 </div>
