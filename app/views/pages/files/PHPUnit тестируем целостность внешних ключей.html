@@ -1,0 +1,31 @@
+Бывает, что при создании схемы бд, люди забывают создавать внешние ключи на столбцы, которые ссылаются на другие таблицы.
+Или же они были нечаянно удалены, либо еще что-то. Каждый раз проверять руками будет накладно, хорошо бы написать тест.
+
+Тестироваться будут foreign keys бд MYSQL, движок INNODB. Тест написан для фреймворка Yii.
+
+<pre class="prettyprint">
+class ForeignKeysTest extends CDbTestCase
+{
+    public function testMain()
+    {
+        //Очищаем кэш, в нем кэшируется схема бд
+        Yii:: app () ->cache->flush();
+
+        $tables = Yii::app()->db->getSchema()->getTables();
+        foreach ($tables as $table)
+        {
+            foreach ($table->columns as $column)
+            {
+                //Названии колонки должно заканчиваться на '_id'
+                if (mb_substr($column->name, -3, null, 'utf-8')  != '_id')
+                {
+                    continue;
+                }
+
+                $msg = "Table: {$table->name}: column '{$column->name}' does not have a foreign key";
+                $this->assertTrue($column->isForeignKey, $msg);
+            }
+        }
+    }
+}
+</pre>
