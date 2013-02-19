@@ -7,9 +7,9 @@
   title = content_for(:title)
   title = 'Артем Остапец | Блог о Web разработке' if title.length.zero?
   %>
-  <title><%=   %></title>
-  <meta name="description" content="<%= content_for?(:description) %>">
-  <meta name="author" content="<%= content_for?(:author) %>">
+  <title><%= title  %></title>
+  <meta name="description" content="<%= title %>">
+  <meta name="author" content="<%= title %>">
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
