@@ -9,7 +9,7 @@ class ForeignKeysTest extends CDbTestCase
     public function testMain()
     {
         //Очищаем кэш, в нем кэшируется схема бд
-        Yii:: app () ->cache->flush();
+        Yii::app()->cache->flush();
 
         $tables = Yii::app()->db->getSchema()->getTables();
         foreach ($tables as $table)
