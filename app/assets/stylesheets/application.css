@@ -12,3 +12,12 @@
  *= require_tree .
  *= require bootstrap
  */
+
+.btn-right {
+    float:right;
+    margin-bottom: 15px !important;
+}
+
+.red {
+    color: #880000;
+}

@@ -6,12 +6,19 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :user_name %>
+      <%= f.label 'Ваше имя', :class => :required %>
       <%= f.text_field :user_name %>
     </div>
 
     <div class="field">
-      <%= f.label :text %>
+      <%= f.label :email do %>
+          Email <span class="desc">(подписаться на комментарии, email опубликован не будет)</span>
+      <% end %>
+      <%= f.text_field :user_email %>
+    </div>
+
+    <div class="field">
+      <%= f.label 'Комментарий', :class => :required %>
       <%= f.text_area :text, rows: 3 %>
     </div>
 

@@ -1,0 +1,19 @@
+<%= form_for(@quiz) do |f| %>
+  <%= display_errors_if_exists @quiz %>
+
+  <div class="field">
+    <%= f.label :title, :class => :required %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :desc, :class => :required %>
+    <%= f.text_area :desc, :rows => 5 %>
+  </div>
+  <div class="field">
+    <%= f.label :passing_per, :class => :required %>
+    <%= f.number_field :passing_per %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Сохранить', :class => 'btn btn-primary' %>
+  </div>
+<% end %>

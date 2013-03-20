@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>:</b>
+  <%= @quiz_answer. %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @quiz_answer.text %>
+</p>
+
+<p>
+  <b>Is right:</b>
+  <%= @quiz_answer.is_right %>
+</p>
+
+
+<%= link_to 'Edit', edit_quiz_answer_path(@quiz_answer) %> |
+<%= link_to 'Back', quiz_answers_path %>

@@ -28,11 +28,17 @@ class Ability
     can [:read, :badges, :feed, :contacts], Page
     can [:read, :create], Comment
 
+    if user.authenticated?
+      can [:index], Quiz
+    end
+
     if user.admin?
       can [:read, :create, :update, :destroy, :detectTags], Page
       can [:index, :create, :update, :destroy, :edit, :fix_counters], Tag
       can [:manage], User
       can [:manage], Comment
+      can [:create, :show, :update, :destroy], Quiz
+      can [:create, :show, :update, :destroy, :index], QuizQuestion
     end
   end
 end

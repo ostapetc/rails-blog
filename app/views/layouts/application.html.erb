@@ -30,7 +30,7 @@
         <span class="icon-bar"></span>
       </a>
       <div class="nav-collapse collapse" id="menu-container">
-        <%= render partial: 'layouts/menu' %>
+        <%= render partial: @menu %>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
         </div>
     <% end %>
 
-    <div class="span11" id="content">
+    <div class="<%= (@left_sidebar || @right_sidebar) ? 'span11' : 'span12' %>" id="content">
         <%= yield %>
     </div>
 

@@ -1,0 +1,24 @@
+<%= form_for([@quiz, @quiz_question]) do |f| %>
+    <%= display_errors_if_exists @quiz_question %>
+
+    <%= f.hidden_field :quiz_id %>
+
+    <div class="field">
+      <%= f.label :text, :class => :required %>
+      <%= f.text_area :text, :rows => 5 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :answer_type, :class => :required %>
+      <%= f.select :answer_type, options_from_collection_for_select(QuizQuestion.answer_types, :first, :last) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Save', :class => 'btn btn-primary' %>
+    </div>
+<% end %>

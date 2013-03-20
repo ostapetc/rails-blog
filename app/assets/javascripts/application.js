@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require_tree .
-//= require bootstrap.min.js
-//= require /Jquery
+//= require Jquery.transformRailsPagination
+//= require prettify
 
 $(function() {
     $('.pagination').transformRailsPagination();
@@ -26,9 +25,11 @@ $(function() {
         $('html,body').animate({
             scrollTop: $('body').offset().top
         }, 'slow');
+    });
 
-//        $('html,body').animate({
-//            scrollTop: el.offset().top
-//        }, 'slow');
+    $('label.required').each(function() {
+        if (!$(this).find('span').length) {
+            $(this).append('<span>*</span>');
+        }
     });
 });

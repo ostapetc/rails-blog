@@ -1,0 +1,31 @@
+<h1><%= @quiz.title %> / Вопросы / просмотр</h1>
+
+<%= link_to 'add question', new_quiz_quiz_question_quiz_answer_path(@quiz, @question), :class => 'btn btn-primary btn-right' %>
+
+<p>
+  <b>Text:</b>
+  <%= @question.text %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @question.image %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @question.answer_type_view %>
+</p>
+
+<p>
+  <b>Questions:</b>
+  <% unless @question.answers.blank? %>
+
+  <% else %>
+    <span class="red">not exists</span>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_quiz_question_path(@quiz_question) %> |
+<%= link_to 'Back', quiz_questions_path %>

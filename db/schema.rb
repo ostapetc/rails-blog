@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129123541) do
+ActiveRecord::Schema.define(:version => 20130320112615) do
 
   create_table "comments", :force => true do |t|
     t.integer  "page_id"
     t.integer  "user_id"
     t.string   "user_name"
+    t.string   "user_email"
     t.text     "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -44,11 +45,36 @@ ActiveRecord::Schema.define(:version => 20130129123541) do
     t.datetime "image_updated_at"
   end
 
+  create_table "quiz_answers", :force => true do |t|
+    t.integer  "question_id"
+    t.text     "text"
+    t.boolean  "is_right"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "quiz_questions", :force => true do |t|
+    t.integer  "quiz_id"
+    t.text     "text"
+    t.string   "image"
+    t.integer  "answer_type"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "quizzes", :force => true do |t|
+    t.string   "title",                       :null => false
+    t.text     "desc",                        :null => false
+    t.integer  "passing_per", :default => 50
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
+
   create_table "tags", :force => true do |t|
     t.string   "name"
-    t.integer  "pages_count", :default => 0
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.integer  "pages_count", :default => 0
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
@@ -64,10 +90,10 @@ ActiveRecord::Schema.define(:version => 20130129123541) do
     t.string   "uid"
     t.string   "provider"
     t.string   "name"
-    t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "role"
+    t.string   "email"
   end
 
 end

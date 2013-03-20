@@ -1,4 +1,10 @@
 Homepage::Application.routes.draw do
+  resources :quizzes do
+    resources :quiz_questions do
+      resources :quiz_answers
+    end
+  end
+
   get "users/manage"
   get "comments/manage"
 

@@ -1,0 +1,42 @@
+<% if can? :create, Quiz %>
+    <%= link_to 'Создать тест', new_quiz_path, :class => 'btn btn-success btn-right' %>
+<% end %>
+
+<% unless @quizzes.blank?  %>
+    <table class="table">
+      <tr>
+        <th>Заголовок</th>
+        <th>Описание</th>
+        <th>Процент прохождения</th>
+        <th>Вопросы</th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @quizzes.each do |quiz| %>
+          <tr>
+            <td>
+              <%= quiz.title %>
+            </td>
+            <td>
+              <%= quiz.desc %>
+            </td>
+            <td style="text-align: center">
+              <%= quiz.passing_per %>
+            </td>
+            <td style="text-align: center">
+              <%= link_to "view (#{quiz.questions.count})", quiz_quiz_questions_path(quiz) %>
+            </td>
+            <td>
+              <%= link_to 'edit', edit_quiz_path(quiz) %>
+            </td>
+            <td>
+              <%= link_to 'delete', quiz_path(quiz), :method => :delete, :confirm => 'Delete Quiz???' %>
+            </td>
+          </tr>
+      <% end  %>
+    </table>
+<% else  %>
+    Quizzes not found.
+<% end  %>
+

@@ -1,0 +1,35 @@
+<h1><%= @quiz.title %> / Вопросы</h1>
+
+<%= link_to 'Добавить вопрос', new_quiz_quiz_question_path(@quiz), :class => 'btn btn-success btn-right' %>
+
+<% unless @questions.blank? %>
+    <table class="table">
+      <tr>
+        <th>Quiz</th>
+        <th>Text</th>
+        <th>Image</th>
+        <th>Type</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @questions.each do |quiz_question| %>
+          <tr>
+            <td><%= quiz_question.quiz_id %></td>
+            <td><%= quiz_question.text %></td>
+            <td><%= quiz_question.image %></td>
+            <td><%= quiz_question.answer_type_view %></td>
+            <td><%= link_to 'Show', quiz_question %></td>
+            <td><%= link_to 'Edit', edit_quiz_question_path(quiz_question) %></td>
+            <td><%= link_to 'Destroy', quiz_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+    </table>
+<% else %>
+    Questions not found.
+<% end %>
+
+
+
+

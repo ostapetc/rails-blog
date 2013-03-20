@@ -1,0 +1,155 @@
+#показывает установленные режимы
+SELECT @@GLOBAL.sql_mode;  #для всех
+SELECT @@SESSION.sql_mode; #для конкретной сессии
+
+#запускаем сервер с нужными режимами
+--sql-mode="modes"
+
+#или в my.cnf
+sql-mode="modes"
+
+#так же можно установить режим уже в работающем сервере запросом
+SET [GLOBAL|SESSION] sql_mode='modes'
+
+#Типы режимов:
+`ANSI` группирует в себе  режимы:
+-REAL_AS_FLOAT
+-PIPES_AS_CONCAT
+-ANSI_QUOTES
+-ONLY_FULL_GROUP_BY #до версии  5.0.3
+
+`DB2` группирует в себе  режимы:
+-PIPES_AS_CONCAT
+-ANSI_QUOTES
+-IGNORE_SPACE
+-NO_KEY_OPTIONS
+-NO_TABLE_OPTIONS
+-NO_FIELD_OPTIONS
+
+`MAXDB` группирует в себе  режимы:
+-PIPES_AS_CONCAT
+-ANSI_QUOTES
+-IGNORE_SPACE
+-NO_KEY_OPTIONS
+-NO_TABLE_OPTIONS
+-NO_FIELD_OPTIONS
+-NO_AUTO_CREATE_USER
+
+`MSSQL` группирует в себе  режимы:
+-PIPES_AS_CONCAT
+-ANSI_QUOTES
+-IGNORE_SPACE
+-NO_KEY_OPTIONS
+-NO_TABLE_OPTIONS
+-NO_FIELD_OPTIONS.
+
+`MYSQL323`, `MYSQL40` группируют в себе  режимы:
+-NO_FIELD_OPTIONS
+-HIGH_NOT_PRECEDENCE.
+
+<table class="table">
+    <tr>
+        <td>
+            REAL_AS_FLOAT
+        </td>
+        <td>
+            делает REAL синонимом FLOAT, по умолчанию REAL синоним DOUBLE
+        </td>
+    </tr>
+    <tr>
+        <td>
+            PIPES_AS_CONCAT
+        </td>
+        <td>
+            делает оператор || синонимом CONCAT
+            SELECT id || email FROM users
+            #равнозначно
+            SELECT CONCAT(id, email) FROM users
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ANSI_QUOTES
+        </td>
+        <td>
+            делает двойную ковычку “"” синонимом "`", причем ковычки "`" попрежнему будут работать
+            как раньше, а двойные кавычки для обрмамления строк больше не годятся
+        </td>
+    </tr>
+    <tr>
+        <td>
+            IGNORE_SPACE
+        </td>
+        <td>
+            допускает пробелы между названием функции и скобкой "("
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ONLY_FULL_GROUP_BY
+        </td>
+        <td>
+            не допускает перечислений тех полей(не агрегированных) в select и having, которые не перечислены в GROUP BY
+
+            #Запрос неверный, так как address должен быть в GROUP BY вместе с name.
+            mysql> SELECT name, address, MAX(age) FROM t GROUP BY name;
+            ERROR 1055 (42000): 't.address' isn't in GROUP BY
+
+
+            #так же неверный запрос, нельзя использовать max_age в HAVING, так как его нет в GROUP BY
+            mysql> SELECT name, MAX(age) AS max_age FROM t GROUP BY name
+            -> HAVING max_age < 30;
+            Empty set (0.00 sec)
+            ERROR 1463 (42000): Non-grouping field 'max_age' is used in HAVING clause
+
+            #нельзя запросить email так как он не указан в GRPUP BY
+            mysql> select max(id),email from users;
+            ERROR 1140 (42000): Mixing of GROUP columns (MIN(),MAX(),COUNT(),...) with no GROUP columns is illegal if there is no GROUP BY clause
+        </td>
+    </tr>
+    <tr>
+        <td>
+            NO_KEY_OPTIONS
+        </td>
+        <td>
+            Не выводит некоторые опции индесов при команде SHOW CREATE TABLE,
+            режим испоьзуется в команде mysqldump
+        </td>
+    </tr>
+    <tr>
+        <td>
+            NO_TABLE_OPTIONS
+        </td>
+        <td>
+            Не выводит некоторые опции таблиц(например ENGINE) при команде SHOW CREATE TABLE,
+            режим испоьзуется в команде mysqldump
+        </td>
+    </tr>
+    <tr>
+        <td>
+            NO_FIELD_OPTIONS
+        </td>
+        <td>
+            Не выводит некоторые опции полей при команде SHOW CREATE TABLE,
+            режим используется в команде mysqldump
+        </td>
+    </tr>
+    <tr>
+        <td>
+            NO_AUTO_CREATE_USER
+        </td>
+        <td>
+            Предотвращает автоматическое создание пользователя при использовании команды GRANT
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+

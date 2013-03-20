@@ -1,4 +1,12 @@
 class ApplicationController < ActionController::Base
+  before_filter :menu
+
+
+  def menu
+    @menu = 'layouts/menu'
+  end
+
+
   def error_not_found(title = 'Not Found')
     raise ActionController::RoutingError.new(title)
   end

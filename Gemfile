@@ -62,7 +62,11 @@ gem 'redcarpet', '1.17.2'
 #parser
 gem 'nokogiri'
 
+#validators
+gem 'validates_email_format_of'
 
+#backbone
+gem "rails-backbone"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
